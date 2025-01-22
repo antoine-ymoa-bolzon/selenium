@@ -1,0 +1,7 @@
+Sikuli IDE 
+(un peu comme selenium ide plutôt spécialisé pour client lourd)
+
+Installer Java: https://www.oracle.com/java/technologies/downloads/
+Installer Sikuli: https://launchpad.net/sikuli/sikulix/2.0.5/+download/sikulixide-2.0.5.jar
+
+Lancer java -jar sikulixide-2.0.5.jar

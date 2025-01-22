@@ -1,0 +1,27 @@
+robot framework
+
+CHROMEDRIVER
+https://googlechromelabs.github.io/chrome-for-testing/#stable
+
+pip install robotframework
+pip install robotframework-browser
+pip install robotframework-seleniumlibrary
+pip freeze
+pip install -U robotframework-robocop
+rfbrowser init --with-deps chromium
+
+
+plugin robot framework pour VSCode
+
+
+lancement des tests:
+> clic flèche à côté du testcase si plugin installé
+> robot --test nomDuTestCase .\nomDuFicDeTest.robot
+> robot .\nomDuFicDeTest.robot
+
+
+
+En savoir plus via User Guide RF
+https://robotframework.org/robotframework/2.6.1/libraries/BuiltIn.html
+
+
