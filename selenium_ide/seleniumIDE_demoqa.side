@@ -1,0 +1,62 @@
+{
+  "id": "8df079a8-b7d1-43a1-b371-f464340521a6",
+  "version": "2.0",
+  "name": "seleniumIDE_demoqa",
+  "url": "https://demoqa.com",
+  "tests": [{
+    "id": "6f5a45a2-bc1f-4bb4-8527-17a04928f8a4",
+    "name": "connexion_site",
+    "commands": [{
+      "id": "44971ddf-5556-4935-9701-07b242dd4643",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "34c25566-5879-4e93-afe0-07bab631a279",
+      "comment": "",
+      "command": "//selectFrame",
+      "target": "relative=top",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "883b8684-fffb-456e-872a-b4e3ff14d14a",
+      "comment": "",
+      "command": "selectFrame",
+      "target": "css=#google_esf",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2afa1283-1ed5-4e19-82cd-9187b2360353",
+      "comment": "",
+      "command": "click",
+      "target": "css=#ad_position_box",
+      "targets": [
+        ["id=ad_position_box", "id"],
+        ["css=#ad_position_box", "css:finder"],
+        ["xpath=//div[@id='ad_position_box']", "xpath:attributes"],
+        ["xpath=//div[3]", "xpath:position"],
+        ["xpath=//div[contains(.,'Ad')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "2444640e-80fe-4d7d-888a-d93b43807296",
+      "comment": "",
+      "command": "selectFrame",
+      "target": "relative=parent",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "9b5f691f-097e-47f6-86c1-e349355c77f6",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["6f5a45a2-bc1f-4bb4-8527-17a04928f8a4"]
+  }],
+  "urls": ["https://demoqa.com/"],
+  "plugins": []
+}

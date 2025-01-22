@@ -1,0 +1,123 @@
+{
+  "id": "5f43efe6-9bcf-447e-9177-108ed7ee31a6",
+  "version": "2.0",
+  "name": "selenium_premiers_pas",
+  "url": "https://spring-framework-petclinic-qctjpkmzuq-od.a.run.app/",
+  "tests": [{
+    "id": "78626239-79f7-4534-a12c-59f6f8cd6628",
+    "name": "Test_PetClinic_1ersPas_SeleniumIDE",
+    "commands": [{
+      "id": "422e112a-ecce-480c-aba0-d7a9c9d2c018",
+      "comment": "",
+      "command": "open",
+      "target": "https://spring-framework-petclinic-qctjpkmzuq-od.a.run.app/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d1ed65e6-b795-47cd-9968-ca2bdcc6b35f",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1574x1032",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "667a0f62-6753-46eb-8117-96ae1580a210",
+      "comment": "",
+      "command": "click",
+      "target": "css=li:nth-child(2) span:nth-child(2)",
+      "targets": [
+        ["css=li:nth-child(2) span:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='main-navbar']/ul/li[2]/a/span[2]", "xpath:idRelative"],
+        ["xpath=//li[2]/a/span[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "93033331-a498-4840-a0a8-9cf384c1bf06",
+      "comment": "",
+      "command": "click",
+      "target": "css=[name='lastName']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "02971cf4-e4f5-417d-9188-a6f8128284ee",
+      "comment": "",
+      "command": "type",
+      "target": "css=[name='lastName']",
+      "targets": [],
+      "value": "Franklin"
+    }, {
+      "id": "dd930b65-5537-4f88-aeff-c66853f22e71",
+      "comment": "",
+      "command": "click",
+      "target": "css=[type='submit']",
+      "targets": [
+        ["linkText=Add Owner", "linkText"],
+        ["css=.btn:nth-child(4)", "css:finder"],
+        ["xpath=//a[contains(text(),'Add Owner')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/owners/new')]", "xpath:href"],
+        ["xpath=//div/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Add Owner')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ef3ada53-9efb-43d4-a1c8-70c4746f7227",
+      "comment": "",
+      "command": "click",
+      "target": "css=[href='1/pets/new']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5014f379-8b56-4518-a75d-f7b74dc6b1e9",
+      "comment": "",
+      "command": "click",
+      "target": "css=#name",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2891cb0e-d61e-4dca-af33-5b92b80911a9",
+      "comment": "",
+      "command": "type",
+      "target": "css=#name",
+      "targets": [],
+      "value": "Zobi"
+    }, {
+      "id": "a6aec70e-e801-4dd3-b4a4-4eba81e37666",
+      "comment": "",
+      "command": "click",
+      "target": "css=#birthDate",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "20dc388a-36ed-48e9-837d-1d3e97fd8c42",
+      "comment": "",
+      "command": "click",
+      "target": "css=[aria-label='January 1, 2025']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1ab2c63c-937e-4572-b920-633272345162",
+      "comment": "",
+      "command": "click",
+      "target": "css=[value='cat']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a0f43335-59a1-4f11-b310-424759fb3a36",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "6b379d0a-dd6b-436d-9cb5-ca5e2d06890d",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["78626239-79f7-4534-a12c-59f6f8cd6628"]
+  }],
+  "urls": ["https://spring-framework-petclinic-qctjpkmzuq-od.a.run.app/"],
+  "plugins": []
+}

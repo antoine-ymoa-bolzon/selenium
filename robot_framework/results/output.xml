@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2 (Python 3.13.1 on win32)" generated="2025-01-21T10:03:21.224171" rpa="false" schemaversion="5">
+<suite id="s1" name="Robot Framework" source="C:\Users\Administrateur\Desktop\selenium\robot_framework">
+<suite id="s1-s1" name="Tests" source="C:\Users\Administrateur\Desktop\selenium\robot_framework\Tests">
+<suite id="s1-s1-s1" name="Test Rf Demoqa" source="C:\Users\Administrateur\Desktop\selenium\robot_framework\Tests\test_rf_demoqa.robot">
+<test id="s1-s1-s1-t1" name="Scenario : Capharnaum" line="32">
+<kw name="Given Into the specific Site" owner="keywords_affined">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-01-21T10:03:21.497997" level="INFO">Opening browser 'chrome' to base url 'https://demoqa.com/'.</msg>
+<arg>${URL}</arg>
+<arg>browser=chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-01-21T10:03:21.497619" elapsed="1.814527"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-01-21T10:03:23.312369" elapsed="0.023871"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-01-21T10:03:25.337363" level="INFO">Slept 2 seconds.</msg>
+<arg>${WAITING}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-01-21T10:03:23.336451" elapsed="2.001798"/>
+</kw>
+<status status="PASS" start="2025-01-21T10:03:21.494809" elapsed="3.843992"/>
+</kw>
+<kw name="When I go to a specific Rubric" owner="keywords_affined">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-01-21T10:03:25.348470" level="INFO">Opening url 'https://demoqa.com/books'</msg>
+<arg>${URL}${ADRESSE}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-01-21T10:03:25.348219" elapsed="0.451299"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-01-21T10:03:27.800248" level="INFO">Slept 2 seconds.</msg>
+<arg>${WAITING}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-01-21T10:03:25.799699" elapsed="2.001145"/>
+</kw>
+<arg>${URL2}</arg>
+<status status="PASS" start="2025-01-21T10:03:25.344516" elapsed="2.456467"/>
+</kw>
+<kw name="And I click to the button" owner="keywords_affined">
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2025-01-21T10:03:27.805978" level="INFO">Executing JavaScript:
+window.scrollBy(0, 0)
+Without any arguments.</msg>
+<arg>window.scrollBy(0, ${SCROLL})</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2025-01-21T10:03:27.805395" elapsed="0.011644"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${LOCBUT}</arg>
+<arg>${WAITING}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-01-21T10:03:27.817326" elapsed="0.024625"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-01-21T10:03:27.842842" level="INFO">Clicking button '//button[@id='login']'.</msg>
+<arg>${LOCBUT}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-21T10:03:27.842363" elapsed="0.070827"/>
+</kw>
+<arg>${LOGIN}</arg>
+<arg>0</arg>
+<status status="PASS" start="2025-01-21T10:03:27.803181" elapsed="0.110320"/>
+</kw>
+<kw name="And I click to the button" owner="keywords_affined">
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2025-01-21T10:03:27.918179" level="INFO">Executing JavaScript:
+window.scrollBy(0, 400)
+Without any arguments.</msg>
+<arg>window.scrollBy(0, ${SCROLL})</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2025-01-21T10:03:27.917754" elapsed="0.006369"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${LOCBUT}</arg>
+<arg>${WAITING}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-01-21T10:03:27.924352" elapsed="0.015950"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-01-21T10:03:27.941245" level="INFO">Clicking button '//button[@id='newUser']'.</msg>
+<arg>${LOCBUT}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-21T10:03:27.940710" elapsed="0.073724"/>
+</kw>
+<arg>${NEWUSER}</arg>
+<arg>400</arg>
+<status status="PASS" start="2025-01-21T10:03:27.915485" elapsed="0.099239"/>
+</kw>
+<kw name="And I confirm the captcha" owner="keywords_affined">
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2025-01-21T10:03:28.021254" level="INFO">Executing JavaScript:
+window.scrollBy(0, 400)
+Without any arguments.</msg>
+<arg>window.scrollBy(0, ${SCROLL})</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2025-01-21T10:03:28.020636" elapsed="0.006821"/>
+</kw>
+<if>
+<branch type="IF" condition="'$TYPE == CHECKBOX'">
+<kw name="I click to the button" owner="keywords_affined">
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2025-01-21T10:03:28.029147" level="INFO">Executing JavaScript:
+window.scrollBy(0, 0)
+Without any arguments.</msg>
+<arg>window.scrollBy(0, ${SCROLL})</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2025-01-21T10:03:28.028687" elapsed="0.004480"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<msg time="2025-01-21T10:03:30.389136" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-56.png"&gt;&lt;img src="selenium-screenshot-56.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-01-21T10:03:30.389690" level="FAIL">Element '//span[@id='recaptcha-anchor' and contains(text(), "I'm not a robot")]' not visible after 2 seconds.</msg>
+<arg>${LOCBUT}</arg>
+<arg>${WAITING}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="FAIL" start="2025-01-21T10:03:28.033466" elapsed="2.358982">Element '//span[@id='recaptcha-anchor' and contains(text(), "I'm not a robot")]' not visible after 2 seconds.</status>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<arg>${LOCBUT}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" start="2025-01-21T10:03:30.392630" elapsed="0.000130"/>
+</kw>
+<arg>${LOCCAPTCHA}</arg>
+<arg>0</arg>
+<status status="FAIL" start="2025-01-21T10:03:28.028234" elapsed="2.364644">Element '//span[@id='recaptcha-anchor' and contains(text(), "I'm not a robot")]' not visible after 2 seconds.</status>
+</kw>
+<status status="FAIL" start="2025-01-21T10:03:28.027762" elapsed="2.365215">Element '//span[@id='recaptcha-anchor' and contains(text(), "I'm not a robot")]' not visible after 2 seconds.</status>
+</branch>
+<branch type="ELSE">
+<kw name="Log" owner="BuiltIn">
+<arg>Type de Captcha non pris en charge</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2025-01-21T10:03:30.393182" elapsed="0.000105"/>
+</kw>
+<status status="NOT RUN" start="2025-01-21T10:03:30.393035" elapsed="0.000325"/>
+</branch>
+<status status="FAIL" start="2025-01-21T10:03:28.027705" elapsed="2.365689">Element '//span[@id='recaptcha-anchor' and contains(text(), "I'm not a robot")]' not visible after 2 seconds.</status>
+</if>
+<arg>${CAPTCHA}</arg>
+<arg>CHECKBOX</arg>
+<arg>400</arg>
+<status status="FAIL" start="2025-01-21T10:03:28.018112" elapsed="2.375364">Element '//span[@id='recaptcha-anchor' and contains(text(), "I'm not a robot")]' not visible after 2 seconds.</status>
+</kw>
+<kw name="And I click to the button" owner="keywords_affined">
+<arg>${REGISTER}</arg>
+<arg>0</arg>
+<status status="NOT RUN" start="2025-01-21T10:03:30.395145" elapsed="0.001479"/>
+</kw>
+<kw name="And I go back" owner="keywords_affined">
+<status status="NOT RUN" start="2025-01-21T10:03:30.398164" elapsed="0.001261"/>
+</kw>
+<kw name="Then The username is still present" owner="keywords_affined">
+<status status="NOT RUN" start="2025-01-21T10:03:30.400745" elapsed="0.001284"/>
+</kw>
+<kw name="When I go to a specific Rubric" owner="keywords_affined">
+<arg>${URL3}</arg>
+<status status="NOT RUN" start="2025-01-21T10:03:30.403445" elapsed="0.001532"/>
+</kw>
+<kw name="When I go to a specific Rubric" owner="keywords_affined">
+<arg>${URL4}</arg>
+<status status="NOT RUN" start="2025-01-21T10:03:30.406682" elapsed="0.001409"/>
+</kw>
+<kw name="When I go to a specific Rubric" owner="keywords_affined">
+<arg>${URL5}</arg>
+<status status="NOT RUN" start="2025-01-21T10:03:30.409546" elapsed="0.001362"/>
+</kw>
+<kw name="When I go to a specific Rubric" owner="keywords_affined">
+<arg>${URL6}</arg>
+<status status="NOT RUN" start="2025-01-21T10:03:30.412332" elapsed="0.001365"/>
+</kw>
+<status status="FAIL" start="2025-01-21T10:03:21.493964" elapsed="8.921203">Element '//span[@id='recaptcha-anchor' and contains(text(), "I'm not a robot")]' not visible after 2 seconds.</status>
+</test>
+<doc>This suite contains Tests Scenarii.</doc>
+<status status="FAIL" start="2025-01-21T10:03:21.252769" elapsed="9.164646"/>
+</suite>
+<status status="FAIL" start="2025-01-21T10:03:21.250921" elapsed="9.169019"/>
+</suite>
+<status status="FAIL" start="2025-01-21T10:03:21.227693" elapsed="9.194541"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Robot Framework" id="s1" pass="0" fail="1" skip="0">Robot Framework</stat>
+<stat name="Tests" id="s1-s1" pass="0" fail="1" skip="0">Robot Framework.Tests</stat>
+<stat name="Test Rf Demoqa" id="s1-s1-s1" pass="0" fail="1" skip="0">Robot Framework.Tests.Test Rf Demoqa</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
