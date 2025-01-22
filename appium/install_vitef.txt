@@ -1,3 +1,67 @@
 Appium
 
 Proc installation
+
+
+
+Appium Device
+Appium Inspector
+
+ADB (Androïd Debug Bridge) : Outils de ligne de commande permettant d'intéragir avec un téléphone (virtuel ou pas)
+ADBD (Daemon)
+
+
+
+https://developer.android.com/studio
+
+>>> android-studio-2024.2.2.13-windows.exe
+>>> Next / next / install / ok / next... comme d'hab'
+
+
+
+
+
+Une fois lancé, la création du device virtuel se fait en cliquant sur l'icône device android (en dessous de l'éléphant) à droite, puis la croix pour ajouter un device,
+on choisi le modèle, puis la config, puis on valide. Après on attend que ça se lance et la machine virtuelle est dispo dans l'icône running en dessous de la création.
+
+
+dans une invite de commande windows (pas powershell, pas terminal androidstudio)
+cd AppData\Local\Android\Sdk\platform-tools
+
+adb devices
+
+
+
+commandes utiles:
+adb-s: sélectionner un device > ex: adb-s emulator-5554
+adb shell
+
+
+
+
+
+
+INSTALLATION Appium
+
+npm i -g appium
+appium
+
+Installer Appium Server GUI
+>>>https://github.com/appium/appium-desktop/releases
+>>>Appium-Server-GUI-windows-1.22.3-4.exe
+Lancer GUI
+>Edit configurations
+>>ANDROID_HOME: C:\Program Files\Java\jdk-23\bin
+>>JAVA_HOME: C:\Program Files\Java\jdk-23\bin\java.exe
+
+
+installer Inspector ensuite
+>>>https://github.com/appium/appium-inspector/releases
+>>>Appium-Inspector-2024.12.1-win-x64.exe
+>>>Lancer exe
+>>>Lancer inspector
+
+
+>>> Pour tester, dl apk de test:
+https://github.com/appium/appium/tree/master/
+packages/appium/sample-code/apps
