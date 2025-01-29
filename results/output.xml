@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2 (Python 3.13.1 on win32)" generated="2025-01-23T13:24:54.767706" rpa="false" schemaversion="5">
+<suite id="s1" name="Selenium" source="C:\Users\Administrateur\Desktop\aymoab_git\selenium">
+<suite id="s1-s1" name="Appium" source="C:\Users\Administrateur\Desktop\aymoab_git\selenium\appium">
+<suite id="s1-s1-s1" name="Test Robotlib" source="C:\Users\Administrateur\Desktop\aymoab_git\selenium\appium\test_robotlib.robot">
+<test id="s1-s1-s1-t1" name="Open Application" line="16">
+<kw>
+<msg time="2025-01-23T13:24:54.943323" level="FAIL">Keyword name cannot be empty.</msg>
+<var>${REMOTE_URL}</var>
+<var>${PLATFORM_NAME}</var>
+<var>${PLATFORM_VERSION}</var>
+<var>${DEVICE_NAME}</var>
+<var>${CALCULATOR_APP_PACKAGE}</var>
+<var>${CALCULATOR_APP_ACTIVITY}</var>
+<var>${AUTOMATION_NAME}</var>
+<status status="FAIL" start="2025-01-23T13:24:54.943055" elapsed="0.000565">Keyword name cannot be empty.</status>
+</kw>
+<status status="FAIL" start="2025-01-23T13:24:54.941909" elapsed="0.002626">Keyword name cannot be empty.</status>
+</test>
+<status status="FAIL" start="2025-01-23T13:24:54.793064" elapsed="0.153426"/>
+</suite>
+<status status="FAIL" start="2025-01-23T13:24:54.790778" elapsed="0.157155"/>
+</suite>
+<status status="FAIL" start="2025-01-23T13:24:54.772025" elapsed="0.176985"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Selenium" id="s1" pass="0" fail="1" skip="0">Selenium</stat>
+<stat name="Appium" id="s1-s1" pass="0" fail="1" skip="0">Selenium.Appium</stat>
+<stat name="Test Robotlib" id="s1-s1-s1" pass="0" fail="1" skip="0">Selenium.Appium.Test Robotlib</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

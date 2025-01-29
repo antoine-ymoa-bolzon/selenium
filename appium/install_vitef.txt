@@ -36,32 +36,255 @@ commandes utiles:
 adb-s: sélectionner un device > ex: adb-s emulator-5554
 adb shell
 
+adb devices >>> Avoir la liste des <device> dispo
+adb -s <device> shell input keyevent 26 >>> Verrouiller/Déverrouiller device
 
 
 
 
-
-INSTALLATION Appium
+INSTALLATION Appium (et lancement >>> à toujours lancer)
 
 npm i -g appium
-appium
+appium (ou appium allow-cors)
+
+
+        ////////!\\\\\\\\
+FINALEMENT NE PAS UTILISER GUI SERVER (quoique, apparemment ça marche avec J, et pas les cmd, et pour d'autres c'est l'inverse, bref)
+        \\\\\\\\!////////
+
 
 Installer Appium Server GUI
 >>>https://github.com/appium/appium-desktop/releases
 >>>Appium-Server-GUI-windows-1.22.3-4.exe
 Lancer GUI
 >Edit configurations
->>ANDROID_HOME: C:\Program Files\Java\jdk-23\bin
+>>ANDROID_HOME: C:\Users\Administrateur\AppData\Local\Android\Sdk\platform-tools
 >>JAVA_HOME: C:\Program Files\Java\jdk-23\bin\java.exe
 
+        ////////!\\\\\\\\
+FINALEMENT NE PAS UTILISER GUI SERVER
+        \\\\\\\\!////////
 
-installer Inspector ensuite
+Mais déclarer tout de même des variables d'environnement
+ANDROID_HOME: C:\Users\Administrateur\AppData\Local\Android\Sdk\platform-tools
+JAVA_HOME: C:\Program Files\Java\jdk-23\bin\java.exe
+
+et ajouter au Path: C:\Users\Administrateur\AppData\Local\Android\Sdk\emulator
+
+
+Installer Inspector ensuite
 >>>https://github.com/appium/appium-inspector/releases
 >>>Appium-Inspector-2024.12.1-win-x64.exe
 >>>Lancer exe
 >>>Lancer inspector
 
+Installer Driver (automator)
+>>> appium driver install uiautomator2
+>>> appium driver list --installed
+ 
+
 
 >>> Pour tester, dl apk de test:
 https://github.com/appium/appium/tree/master/
 packages/appium/sample-code/apps
+
+
+Déplacer l'apk dans le platform-tools du sdk
+Pour lancer l'apk:
+adb install ApiDemos-debug.apk
+(bien penser à lancer le virtual device sur androidstudio)
+
+
+ouvrir Inpector et alimenter json avec:
+{
+  "platformName": "Android",
+  "appium:platformVersion": "15",
+  "appium:deviceName": "emulator-5556",
+  "appium:appPackage": "com.google.android.youtube",
+  "appium:appActivity": "com.google.android.youtube.app.honeycomb.Shell$HomeActivity",
+  "appium:automationName": "UiAutomator2"
+}
+
+
+
+
+
+Installer une app sur device:
+exemple:
+
+adb install com.google.android.calculator_8.4.apk
+
+
+Lancer device désencapsulé d'android studio
+emulator -avd Pixel_7_API_35
+
+
+!!!!!!Attention aux versions!!!!!!!
+
+Appium 2.15
+Selenium 4.16
+Appium-Python-Client 3.2.1
+robotframework-appiumlibrary 2.1.0
+
+ça marche avec ces versions, sinon ça casse la tête
+!!!!!!Attention aux versions!!!!!!!
+
+En cas de soucis sur un test qui marche et t'en refait un aavec les même trucs et ça marche plus, c'est sans doute un souci de PID
+tenter la commande>>> netstat -ano | findstr :PORTCONCERNé     (en général 4723)
+S'il y a plus qu'une ligne c'est qu'il y a un soucis. Kill
+
+
+
+
+Exo exemple avec Inspector:
+Faire lancer le device avec l'ouverture de l'apk calculator pour voir.
+Après interrogation ChatGPT, réecriture json proposé pour lancer com.google.android.calculator_8.4.apk
+Il a conseillé d'abord de retrouver le package à pointer: 
+
+adb shell dumpsys package com.google.android.calculator
+
+Afin d'identifier: appPackage et appActivity
+Ce qui donne:
+
+{
+  "platformName": "Android",
+  "appium:platformVersion": "15",
+  "appium:deviceName": "emulator-5556",
+  "appium:appPackage": "com.google.android.calculator",
+  "appium:appActivity": "com.android.calculator2.Calculator",
+  "appium:automationName": "UiAutomator2"
+}
+
+
+
+
+
+
+INSTALLER Librairie RobotFramework pour Appium sur porjet VSCode
+> Ouvrir VSCode
+> pip install robotframework-appiumlibrary (et pip install robotframework avant si pas déjà installé)
+> Intaller extension "Robot Framework Language Server"
+
+
+
+
+
+
+KB Debug
+En cas d'installation d'apk qui remonte cette erreur:
+Performing Streamed Install
+adb: failed to install com.google.android.calculator_8.4.apk: Failure [INSTALL_PARSE_FAILED_NOT_APK: Failed to parse
+>>> Retélécharger l'apk, apparemment un truc a chié et le fichier n'est plus reconnu comme app.
+
+
+
+
+cmd utiles: 
+
+ tasklist | findstr processus                                 (ex: emulator ou adb)
+ taskkill /PID <PID_du_processus> /F
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 1. Vérifier et nettoyer les processus fantômes
+Certaines erreurs surviennent si des processus (émulateurs ou ADB) sont toujours actifs en arrière-plan. Assurons-nous qu’ils sont tous terminés :
+
+Liste des processus liés à l'émulateur :
+
+cmd
+Copier
+Modifier
+tasklist | findstr emulator
+Si tu vois des processus comme emulator.exe, termine-les :
+
+cmd
+Copier
+Modifier
+taskkill /PID <PID_du_processus> /F
+Liste des processus liés à ADB :
+
+cmd
+Copier
+Modifier
+tasklist | findstr adb
+Termine-les aussi si nécessaire :
+
+cmd
+Copier
+Modifier
+taskkill /PID <PID_du_processus> /F
+2. Forcer le redémarrage d'ADB
+ADB doit être redémarré proprement pour éviter des conflits réseau :
+
+cmd
+Copier
+Modifier
+adb kill-server
+adb start-server
+Si adb kill-server échoue avec l’erreur "cannot connect to daemon", cela peut indiquer que le port 5037 est occupé. Vérifions :
+
+cmd
+Copier
+Modifier
+netstat -ano | findstr 5037
+Si un autre processus occupe ce port, termine-le :
+cmd
+Copier
+Modifier
+taskkill /PID <PID_du_processus> /F
+3. Supprimer les verrous de l’AVD
+Les fichiers .lock empêchent parfois l’émulateur de démarrer. Supprime-les dans le dossier de ton AVD :
+
+Par défaut, les fichiers sont dans :
+plaintext
+Copier
+Modifier
+C:\Users\<ton_nom_utilisateur>\.android\avd\<nom_de_l_AVD>\
+Supprime les fichiers :
+hardware-qemu.ini.lock
+multiinstance.lock
+4. Lancer l'émulateur avec -read-only
+Puisque l’erreur indique une tentative de lancement multiple, essaie de démarrer l’émulateur avec l’option -read-only :
+
+cmd
+Copier
+Modifier
+emulator -avd Pixel_7_API_35 -read-only
+5. Vérifier le démarrage de l’émulateur
+Après le lancement de l’émulateur, utilise :
+
+cmd
+Copier
+Modifier
+adb devices
+Si un appareil virtuel apparaît (ex. emulator-5554), tout est prêt pour continuer.
+Sinon, il y a un problème avec ton AVD ou ta configuration Android Studio.
+6. Relancer Appium
+Pour être sûr qu’Appium fonctionne correctement après tout cela :
+
+cmd
+Copier
+Modifier
+appium
+Une fois lancé, vérifie qu’il écoute sur le port 4723 :
+
+cmd
+Copier
+Modifier
+netstat -ano | findstr 4723
+Si tout semble bon, relance ton test Robot Framework.

@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2 (Python 3.13.1 on win32)" generated="2025-01-24T16:48:39.621790" rpa="false" schemaversion="5">
+<suite id="s1" name="Test Robotlib" source="C:\Users\Administrateur\Desktop\aymoab_git\selenium\appium\test_robotlib.robot">
+<test id="s1-t1" name="Scenario Faire des Trucs sur une App" line="14">
+<kw name="given Launch an App" owner="keywords">
+<kw name="Check ADB Accessibility And Start Emulator If Needed" owner="keywords">
+<kw name="Test ADB Command" owner="keywords">
+<kw name="Run Process" owner="Process">
+<msg time="2025-01-24T16:48:39.824442" level="INFO">Starting process:
+C:/Users/Administrateur/AppData/Local/Android/Sdk/platform-tools/adb devices</msg>
+<msg time="2025-01-24T16:48:39.824492" level="DEBUG">Process configuration:
+cwd:     C:\Users\Administrateur\Desktop\aymoab_git\selenium\appium
+shell:   False
+stdout:  C:\Users\Administrateur\Desktop\aymoab_git\selenium\appium\True
+stderr:  C:\Users\Administrateur\Desktop\aymoab_git\selenium\appium\False
+stdin:   None
+alias:   None
+env:     None</msg>
+<msg time="2025-01-24T16:48:39.827591" level="INFO">Waiting for process to complete.</msg>
+<msg time="2025-01-24T16:48:39.842471" level="INFO">Process completed.</msg>
+<msg time="2025-01-24T16:48:39.842664" level="INFO">${adb_raw} = &lt;result object with rc 0&gt;</msg>
+<var>${adb_raw}</var>
+<arg>${ADB_PATH}adb</arg>
+<arg>devices</arg>
+<arg>stdout=True</arg>
+<arg>stderr=False</arg>
+<doc>Runs a process and waits for it to complete.</doc>
+<status status="PASS" start="2025-01-24T16:48:39.823950" elapsed="0.018738"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>ADB Raw Output: ${adb_raw.stdout}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-01-24T16:48:39.842850" elapsed="0.001598"/>
+</kw>
+<status status="PASS" start="2025-01-24T16:48:39.823522" elapsed="0.021030"/>
+</kw>
+<status status="PASS" start="2025-01-24T16:48:39.823371" elapsed="0.021225"/>
+</kw>
+<kw name="Open Application" owner="AppiumLibrary">
+<msg time="2025-01-24T16:48:39.845249" level="DEBUG">POST http://127.0.0.1:4723/wd/hub/session {"capabilities": {"firstMatch": [{}], "alwaysMatch": {"platformName": "Android", "appium:platformVersion": "15", "appium:deviceName": "emulator-5554", "appium:appPackage": "com.google.android.calculator", "appium:appActivity": "com.android.calculator2.Calculator", "appium:automationName": "UiAutomator2"}}}</msg>
+<msg time="2025-01-24T16:48:39.880441" level="DEBUG">Starting new HTTP connection (1): 127.0.0.1:4723</msg>
+<msg time="2025-01-24T16:48:40.075547" level="DEBUG">http://127.0.0.1:4723 "POST /wd/hub/session HTTP/1.1" 404 0</msg>
+<msg time="2025-01-24T16:48:40.075869" level="DEBUG">Remote response: status=404 | data={"status":9,"value":{"error":"unknown command","message":"The requested resource could not be found, or a request was received using an HTTP method that is not supported by the mapped resource","stacktrace":""}} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '211', 'ETag': 'W/"d3-gyQ2eXfteJGx5Yg/CojOo7oJODc"', 'Date': 'Fri, 24 Jan 2025 15:48:40 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg time="2025-01-24T16:48:40.076028" level="DEBUG">Finished Request</msg>
+<kw name="Capture Page Screenshot" owner="AppiumLibrary">
+<msg time="2025-01-24T16:48:40.077207" level="FAIL">No application is open</msg>
+<msg time="2025-01-24T16:48:40.182004" level="DEBUG">Traceback (most recent call last):
+  File "C:\Users\Administrateur\AppData\Local\Programs\Python\Python313\Lib\site-packages\AppiumLibrary\keywords\keywordgroup.py", line 16, in _run_on_failure_decorator
+    return method(*args, **kwargs)
+  File "C:\Users\Administrateur\AppData\Local\Programs\Python\Python313\Lib\site-packages\AppiumLibrary\keywords\_applicationmanagement.py", line 60, in open_application
+    application = webdriver.Remote(str(remote_url), options=desired_caps, strict_ssl=strict_ssl)
+  File "C:\Users\Administrateur\AppData\Local\Programs\Python\Python313\Lib\site-packages\appium\webdriver\webdriver.py", line 229, in __init__
+    super().__init__(
+    ~~~~~~~~~~~~~~~~^
+        command_executor=command_executor,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        options=options,
+        ^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Administrateur\AppData\Local\Programs\Python\Python313\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 209, in __init__
+    self.start_session(capabilities)
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\Administrateur\AppData\Local\Programs\Python\Python313\Lib\site-packages\appium\webdriver\webdriver.py", line 321, in start_session
+    response = self.execute(RemoteCommand.NEW_SESSION, w3c_caps)
+  File "C:\Users\Administrateur\AppData\Local\Programs\Python\Python313\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 348, in execute
+    self.error_handler.check_response(response)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\Administrateur\AppData\Local\Programs\Python\Python313\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.WebDriverException: Message: The requested resource could not be found, or a request was received using an HTTP method that is not supported by the mapped resource
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrateur\AppData\Local\Programs\Python\Python313\Lib\site-packages\decorator.py", line 232, in fun
+    return caller(func, *(extras + args), **kw)
+  File "C:\Users\Administrateur\AppData\Local\Programs\Python\Python313\Lib\site-packages\AppiumLibrary\keywords\keywordgroup.py", line 21, in _run_on_failure_decorator
+    raise err
+  File "C:\Users\Administrateur\AppData\Local\Programs\Python\Python313\Lib\site-packages\AppiumLibrary\keywords\keywordgroup.py", line 16, in _run_on_failure_decorator
+    return method(*args, **kwargs)
+  File "C:\Users\Administrateur\AppData\Local\Programs\Python\Python313\Lib\site-packages\AppiumLibrary\keywords\_screenshot.py", line 34, in capture_page_screenshot
+    base64_screenshot = self._current_application().get_screenshot_as_base64()
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Administrateur\AppData\Local\Programs\Python\Python313\Lib\site-packages\AppiumLibrary\keywords\_applicationmanagement.py", line 469, in _current_application
+    raise RuntimeError('No application is open')
+RuntimeError: No application is open</msg>
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<status status="FAIL" start="2025-01-24T16:48:40.076609" elapsed="0.105542">No application is open</status>
+</kw>
+<msg time="2025-01-24T16:48:40.184868" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
+<msg time="2025-01-24T16:48:40.186306" level="FAIL">WebDriverException: Message: The requested resource could not be found, or a request was received using an HTTP method that is not supported by the mapped resource
+</msg>
+<msg time="2025-01-24T16:48:40.188304" level="DEBUG">Traceback (most recent call last):
+  File "C:\Users\Administrateur\AppData\Local\Programs\Python\Python313\Lib\site-packages\decorator.py", line 232, in fun
+    return caller(func, *(extras + args), **kw)
+  File "C:\Users\Administrateur\AppData\Local\Programs\Python\Python313\Lib\site-packages\AppiumLibrary\keywords\keywordgroup.py", line 21, in _run_on_failure_decorator
+    raise err
+  File "C:\Users\Administrateur\AppData\Local\Programs\Python\Python313\Lib\site-packages\AppiumLibrary\keywords\keywordgroup.py", line 16, in _run_on_failure_decorator
+    return method(*args, **kwargs)
+  File "C:\Users\Administrateur\AppData\Local\Programs\Python\Python313\Lib\site-packages\AppiumLibrary\keywords\_applicationmanagement.py", line 60, in open_application
+    application = webdriver.Remote(str(remote_url), options=desired_caps, strict_ssl=strict_ssl)
+  File "C:\Users\Administrateur\AppData\Local\Programs\Python\Python313\Lib\site-packages\appium\webdriver\webdriver.py", line 229, in __init__
+    super().__init__(
+    ~~~~~~~~~~~~~~~~^
+        command_executor=command_executor,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        options=options,
+        ^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Administrateur\AppData\Local\Programs\Python\Python313\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 209, in __init__
+    self.start_session(capabilities)
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\Administrateur\AppData\Local\Programs\Python\Python313\Lib\site-packages\appium\webdriver\webdriver.py", line 321, in start_session
+    response = self.execute(RemoteCommand.NEW_SESSION, w3c_caps)
+  File "C:\Users\Administrateur\AppData\Local\Programs\Python\Python313\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 348, in execute
+    self.error_handler.check_response(response)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\Administrateur\AppData\Local\Programs\Python\Python313\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.WebDriverException: Message: The requested resource could not be found, or a request was received using an HTTP method that is not supported by the mapped resource</msg>
+<arg>${REMOTE_URL}</arg>
+<arg>platformName=${PLATFORM_NAME}</arg>
+<arg>platformVersion=${PLATFORM_VERSION}</arg>
+<arg>deviceName=${DEVICE_NAME}</arg>
+<arg>appPackage=${CALCULATOR_APP_PACKAGE}</arg>
+<arg>appActivity=${CALCULATOR_APP_ACTIVITY}</arg>
+<arg>automationName=${AUTOMATION_NAME}</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://appium.io/docs/en/2.1/cli/args/
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |
+| strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
+<status status="FAIL" start="2025-01-24T16:48:39.844691" elapsed="0.343753">WebDriverException: Message: The requested resource could not be found, or a request was received using an HTTP method that is not supported by the mapped resource
+</status>
+</kw>
+<status status="FAIL" start="2025-01-24T16:48:39.823156" elapsed="0.365445">WebDriverException: Message: The requested resource could not be found, or a request was received using an HTTP method that is not supported by the mapped resource
+</status>
+</kw>
+<kw name="when I do a thing" owner="keywords">
+<status status="NOT RUN" start="2025-01-24T16:48:40.189081" elapsed="0.000030"/>
+</kw>
+<kw name="then A thing was doing" owner="keywords">
+<status status="NOT RUN" start="2025-01-24T16:48:40.189547" elapsed="0.000034"/>
+</kw>
+<status status="FAIL" start="2025-01-24T16:48:39.822439" elapsed="0.367456">WebDriverException: Message: The requested resource could not be found, or a request was received using an HTTP method that is not supported by the mapped resource
+</status>
+</test>
+<test id="s1-t2" name="Scenario Play With AppDemo" line="19">
+<kw name="given Launch an App" owner="keywords">
+<kw name="Check ADB Accessibility And Start Emulator If Needed" owner="keywords">
+<kw name="Test ADB Command" owner="keywords">
+<kw name="Run Process" owner="Process">
+<msg time="2025-01-24T16:48:40.193765" level="INFO">Starting process:
+C:/Users/Administrateur/AppData/Local/Android/Sdk/platform-tools/adb devices</msg>
+<msg time="2025-01-24T16:48:40.193799" level="DEBUG">Process configuration:
+cwd:     C:\Users\Administrateur\Desktop\aymoab_git\selenium\appium
+shell:   False
+stdout:  C:\Users\Administrateur\Desktop\aymoab_git\selenium\appium\True
+stderr:  C:\Users\Administrateur\Desktop\aymoab_git\selenium\appium\False
+stdin:   None
+alias:   None
+env:     None</msg>
+<msg time="2025-01-24T16:48:40.195818" level="INFO">Waiting for process to complete.</msg>
+<msg time="2025-01-24T16:48:40.211916" level="INFO">Process completed.</msg>
+<msg time="2025-01-24T16:48:40.212066" level="INFO">${adb_raw} = &lt;result object with rc 0&gt;</msg>
+<var>${adb_raw}</var>
+<arg>${ADB_PATH}adb</arg>
+<arg>devices</arg>
+<arg>stdout=True</arg>
+<arg>stderr=False</arg>
+<doc>Runs a process and waits for it to complete.</doc>
+<status status="PASS" start="2025-01-24T16:48:40.193149" elapsed="0.018951"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>ADB Raw Output: ${adb_raw.stdout}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-01-24T16:48:40.212224" elapsed="0.001834"/>
+</kw>
+<status status="PASS" start="2025-01-24T16:48:40.193005" elapsed="0.021123"/>
+</kw>
+<status status="PASS" start="2025-01-24T16:48:40.192859" elapsed="0.021300"/>
+</kw>
+<kw name="Open Application" owner="AppiumLibrary">
+<msg time="2025-01-24T16:48:40.214639" level="DEBUG">POST http://127.0.0.1:4723/wd/hub/session {"capabilities": {"firstMatch": [{}], "alwaysMatch": {"platformName": "Android", "appium:platformVersion": "15", "appium:deviceName": "emulator-5554", "appium:appPackage": "com.google.android.calculator", "appium:appActivity": "com.android.calculator2.Calculator", "appium:automationName": "UiAutomator2"}}}</msg>
+<msg time="2025-01-24T16:48:40.214899" level="DEBUG">Starting new HTTP connection (1): 127.0.0.1:4723</msg>
+<msg time="2025-01-24T16:48:40.226761" level="DEBUG">http://127.0.0.1:4723 "POST /wd/hub/session HTTP/1.1" 404 0</msg>
+<msg time="2025-01-24T16:48:40.226941" level="DEBUG">Remote response: status=404 | data={"status":9,"value":{"error":"unknown command","message":"The requested resource could not be found, or a request was received using an HTTP method that is not supported by the mapped resource","stacktrace":""}} | headers=HTTPHeaderDict({'X-Powered-By': 'Express', 'Vary': 'X-HTTP-Method-Override', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '211', 'ETag': 'W/"d3-gyQ2eXfteJGx5Yg/CojOo7oJODc"', 'Date': 'Fri, 24 Jan 2025 15:48:40 GMT', 'Connection': 'keep-alive', 'Keep-Alive': 'timeout=600'})</msg>
+<msg time="2025-01-24T16:48:40.226991" level="DEBUG">Finished Request</msg>
+<kw name="Capture Page Screenshot" owner="AppiumLibrary">
+<msg time="2025-01-24T16:48:40.227420" level="FAIL">No application is open</msg>
+<msg time="2025-01-24T16:48:40.228645" level="DEBUG">Traceback (most recent call last):
+  File "C:\Users\Administrateur\AppData\Local\Programs\Python\Python313\Lib\site-packages\AppiumLibrary\keywords\keywordgroup.py", line 16, in _run_on_failure_decorator
+    return method(*args, **kwargs)
+  File "C:\Users\Administrateur\AppData\Local\Programs\Python\Python313\Lib\site-packages\AppiumLibrary\keywords\_applicationmanagement.py", line 60, in open_application
+    application = webdriver.Remote(str(remote_url), options=desired_caps, strict_ssl=strict_ssl)
+  File "C:\Users\Administrateur\AppData\Local\Programs\Python\Python313\Lib\site-packages\appium\webdriver\webdriver.py", line 229, in __init__
+    super().__init__(
+    ~~~~~~~~~~~~~~~~^
+        command_executor=command_executor,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        options=options,
+        ^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Administrateur\AppData\Local\Programs\Python\Python313\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 209, in __init__
+    self.start_session(capabilities)
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\Administrateur\AppData\Local\Programs\Python\Python313\Lib\site-packages\appium\webdriver\webdriver.py", line 321, in start_session
+    response = self.execute(RemoteCommand.NEW_SESSION, w3c_caps)
+  File "C:\Users\Administrateur\AppData\Local\Programs\Python\Python313\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 348, in execute
+    self.error_handler.check_response(response)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\Administrateur\AppData\Local\Programs\Python\Python313\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.WebDriverException: Message: The requested resource could not be found, or a request was received using an HTTP method that is not supported by the mapped resource
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrateur\AppData\Local\Programs\Python\Python313\Lib\site-packages\decorator.py", line 232, in fun
+    return caller(func, *(extras + args), **kw)
+  File "C:\Users\Administrateur\AppData\Local\Programs\Python\Python313\Lib\site-packages\AppiumLibrary\keywords\keywordgroup.py", line 21, in _run_on_failure_decorator
+    raise err
+  File "C:\Users\Administrateur\AppData\Local\Programs\Python\Python313\Lib\site-packages\AppiumLibrary\keywords\keywordgroup.py", line 16, in _run_on_failure_decorator
+    return method(*args, **kwargs)
+  File "C:\Users\Administrateur\AppData\Local\Programs\Python\Python313\Lib\site-packages\AppiumLibrary\keywords\_screenshot.py", line 34, in capture_page_screenshot
+    base64_screenshot = self._current_application().get_screenshot_as_base64()
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Administrateur\AppData\Local\Programs\Python\Python313\Lib\site-packages\AppiumLibrary\keywords\_applicationmanagement.py", line 469, in _current_application
+    raise RuntimeError('No application is open')
+RuntimeError: No application is open</msg>
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<status status="FAIL" start="2025-01-24T16:48:40.227232" elapsed="0.001528">No application is open</status>
+</kw>
+<msg time="2025-01-24T16:48:40.229687" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
+<msg time="2025-01-24T16:48:40.230684" level="FAIL">WebDriverException: Message: The requested resource could not be found, or a request was received using an HTTP method that is not supported by the mapped resource
+</msg>
+<msg time="2025-01-24T16:48:40.231877" level="DEBUG">Traceback (most recent call last):
+  File "C:\Users\Administrateur\AppData\Local\Programs\Python\Python313\Lib\site-packages\decorator.py", line 232, in fun
+    return caller(func, *(extras + args), **kw)
+  File "C:\Users\Administrateur\AppData\Local\Programs\Python\Python313\Lib\site-packages\AppiumLibrary\keywords\keywordgroup.py", line 21, in _run_on_failure_decorator
+    raise err
+  File "C:\Users\Administrateur\AppData\Local\Programs\Python\Python313\Lib\site-packages\AppiumLibrary\keywords\keywordgroup.py", line 16, in _run_on_failure_decorator
+    return method(*args, **kwargs)
+  File "C:\Users\Administrateur\AppData\Local\Programs\Python\Python313\Lib\site-packages\AppiumLibrary\keywords\_applicationmanagement.py", line 60, in open_application
+    application = webdriver.Remote(str(remote_url), options=desired_caps, strict_ssl=strict_ssl)
+  File "C:\Users\Administrateur\AppData\Local\Programs\Python\Python313\Lib\site-packages\appium\webdriver\webdriver.py", line 229, in __init__
+    super().__init__(
+    ~~~~~~~~~~~~~~~~^
+        command_executor=command_executor,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        options=options,
+        ^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\Administrateur\AppData\Local\Programs\Python\Python313\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 209, in __init__
+    self.start_session(capabilities)
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\Administrateur\AppData\Local\Programs\Python\Python313\Lib\site-packages\appium\webdriver\webdriver.py", line 321, in start_session
+    response = self.execute(RemoteCommand.NEW_SESSION, w3c_caps)
+  File "C:\Users\Administrateur\AppData\Local\Programs\Python\Python313\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 348, in execute
+    self.error_handler.check_response(response)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\Administrateur\AppData\Local\Programs\Python\Python313\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.WebDriverException: Message: The requested resource could not be found, or a request was received using an HTTP method that is not supported by the mapped resource</msg>
+<arg>${REMOTE_URL}</arg>
+<arg>platformName=${PLATFORM_NAME}</arg>
+<arg>platformVersion=${PLATFORM_VERSION}</arg>
+<arg>deviceName=${DEVICE_NAME}</arg>
+<arg>appPackage=${CALCULATOR_APP_PACKAGE}</arg>
+<arg>appActivity=${CALCULATOR_APP_ACTIVITY}</arg>
+<arg>automationName=${AUTOMATION_NAME}</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://appium.io/docs/en/2.1/cli/args/
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |
+| strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
+<status status="FAIL" start="2025-01-24T16:48:40.214237" elapsed="0.017675">WebDriverException: Message: The requested resource could not be found, or a request was received using an HTTP method that is not supported by the mapped resource
+</status>
+</kw>
+<status status="FAIL" start="2025-01-24T16:48:40.192667" elapsed="0.039351">WebDriverException: Message: The requested resource could not be found, or a request was received using an HTTP method that is not supported by the mapped resource
+</status>
+</kw>
+<status status="FAIL" start="2025-01-24T16:48:40.191732" elapsed="0.040535">WebDriverException: Message: The requested resource could not be found, or a request was received using an HTTP method that is not supported by the mapped resource
+</status>
+</test>
+<status status="FAIL" start="2025-01-24T16:48:39.622945" elapsed="0.610654"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="2" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Test Robotlib" id="s1" pass="0" fail="2" skip="0">Test Robotlib</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2025-01-24T16:48:40.184868" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
+<msg time="2025-01-24T16:48:40.229687" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
+</errors>
+</robot>
