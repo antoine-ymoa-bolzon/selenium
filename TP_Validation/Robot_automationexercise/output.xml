@@ -1,0 +1,2555 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2 (Python 3.13.1 on win32)" generated="2025-01-31T16:41:41.785487" rpa="false" schemaversion="5">
+<suite id="s1" name="Tp Validation Abo Automationexo" source="C:\Users\Administrateur\Desktop\aymoab_git\selenium\TP_Validation\Robot_automationexercise\Tests\tp_validation_abo_automationexo.robot">
+<test id="s1-t1" name="Scenario : 3-1 - Recherche simple" line="19">
+<kw name="Given Le navigateur est lancé" owner="keywords">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-01-31T16:41:41.962461" level="INFO">Opening browser 'Chrome' to base url 'about:blank'.</msg>
+<arg>about:blank</arg>
+<arg>${NAV}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-01-31T16:41:41.962285" elapsed="1.265229"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-01-31T16:41:43.227782" elapsed="0.033396"/>
+</kw>
+<status status="PASS" start="2025-01-31T16:41:41.961723" elapsed="1.299731"/>
+</kw>
+<kw name="And L'utilisateur accède à &quot;http://automationexercise.com&quot;" owner="keywords">
+<kw name="Acceder au site" owner="keywords">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-01-31T16:41:43.262647" level="INFO">Opening url 'https://automationexercise.com'</msg>
+<arg>${URL2}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-01-31T16:41:43.262522" elapsed="1.409795"/>
+</kw>
+<status status="PASS" start="2025-01-31T16:41:43.262355" elapsed="1.410164"/>
+</kw>
+<kw name="Gerer les cookies" owner="keywords">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-01-31T16:41:45.673372" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-01-31T16:41:44.672946" elapsed="1.000537"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-01-31T16:41:45.695288" level="INFO">Element '//div[contains(@class, 'fc-consent-root')]' is displayed.</msg>
+<arg>//div[contains(@class, 'fc-consent-root')]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-01-31T16:41:45.673857" elapsed="0.021522"/>
+</kw>
+<msg time="2025-01-31T16:41:45.695498" level="INFO">${popup_visible} = True</msg>
+<var>${popup_visible}</var>
+<arg>Element Should Be Visible</arg>
+<arg>//div[contains(@class, 'fc-consent-root')]</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2025-01-31T16:41:45.673669" elapsed="0.021850"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-01-31T16:41:45.695916" level="INFO">Clicking element '//button[contains(@class, 'fc-cta-consent')]'.</msg>
+<arg>//button[contains(@class, 'fc-cta-consent')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-31T16:41:45.695805" elapsed="0.094280"/>
+</kw>
+<arg>${popup_visible}</arg>
+<arg>Click Element</arg>
+<arg>//button[contains(@class, 'fc-cta-consent')]</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2025-01-31T16:41:45.695643" elapsed="0.094575"/>
+</kw>
+<status status="PASS" start="2025-01-31T16:41:44.672722" elapsed="1.117574"/>
+</kw>
+<status status="PASS" start="2025-01-31T16:41:43.262079" elapsed="2.528308"/>
+</kw>
+<kw name="Then La page d'accueil est visible" owner="keywords">
+<kw name="NavElement is colored" owner="keywords">
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2025-01-31T16:41:45.811303" level="INFO">${color} = color: orange;</msg>
+<var>${color}</var>
+<arg>${XPATH}</arg>
+<arg>style</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2025-01-31T16:41:45.791691" elapsed="0.019661"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${color}</arg>
+<arg>color: ${COULEUR}</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2025-01-31T16:41:45.811511" elapsed="0.000215"/>
+</kw>
+<arg>${NAVCOLOR}</arg>
+<arg>${HOME_XPATH}</arg>
+<status status="PASS" start="2025-01-31T16:41:45.791400" elapsed="0.020400"/>
+</kw>
+<status status="PASS" start="2025-01-31T16:41:45.791053" elapsed="0.020812"/>
+</kw>
+<kw name="When L'utilisateur clique sur le bouton" owner="keywords">
+<kw name="Clic sur element" owner="keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${XPATH_ELT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-01-31T16:41:45.812586" elapsed="0.021924"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-01-31T16:41:45.834848" level="INFO">Clicking element '//a[contains(text(), 'Products')]'.</msg>
+<arg>${XPATH_ELT}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-31T16:41:45.834668" elapsed="2.028329"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-01-31T16:41:49.863930" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-01-31T16:41:47.863212" elapsed="2.000864"/>
+</kw>
+<arg>//a[contains(text(), '${PRODUCTS_RUBRIQUE}')]</arg>
+<status status="PASS" start="2025-01-31T16:41:45.812381" elapsed="4.051820"/>
+</kw>
+<arg>${PRODUCT_TERMINOLOGY}</arg>
+<status status="PASS" start="2025-01-31T16:41:45.812145" elapsed="4.052145"/>
+</kw>
+<kw name="Then L'utilisateur est redirigé avec succès vers la page &quot;TOUS LES PRODUITS&quot;" owner="keywords">
+<kw name="Get Location" owner="SeleniumLibrary">
+<msg time="2025-01-31T16:41:49.871850" level="INFO">${URL_Locale} = https://automationexercise.com/products</msg>
+<var>${URL_Locale}</var>
+<doc>Returns the current browser window URL.</doc>
+<status status="PASS" start="2025-01-31T16:41:49.865134" elapsed="0.006796"/>
+</kw>
+<kw name="Comparer URL" owner="keywords">
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${URL1}</arg>
+<arg>${URL2}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2025-01-31T16:41:49.872887" elapsed="0.000425"/>
+</kw>
+<arg>${URL_locale}</arg>
+<arg>${URL2}/products</arg>
+<status status="PASS" start="2025-01-31T16:41:49.872210" elapsed="0.001291"/>
+</kw>
+<status status="PASS" start="2025-01-31T16:41:49.864729" elapsed="0.008941"/>
+</kw>
+<kw name="When L'utilisateur effectue une recherche pour trouver le produit" owner="keywords">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-01-31T16:41:49.875303" level="INFO">Typing text 'Dress' into text field '//input[@id='search_product']'.</msg>
+<arg>//input[@id='search_product']</arg>
+<arg>${RECHERCHE}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-31T16:41:49.874835" elapsed="0.094213"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-01-31T16:41:49.969553" level="INFO">Clicking button '//button[@id='submit_search']'.</msg>
+<arg>//button[@id='submit_search']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-31T16:41:49.969286" elapsed="1.648172"/>
+</kw>
+<arg>${SEARCHED_PRODUCT}</arg>
+<status status="PASS" start="2025-01-31T16:41:49.874209" elapsed="1.743428"/>
+</kw>
+<kw name="Then &quot;PRODUITS RECHERCHÉS&quot; est visible" owner="keywords">
+<kw name="The following string is visible" owner="keywords">
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-01-31T16:41:51.642681" level="INFO">${TEXTE_Recup} = SEARCHED PRODUCTS</msg>
+<var>${TEXTE_Recup}</var>
+<arg>//h2[@class='title text-center']</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-31T16:41:51.618737" elapsed="0.024040"/>
+</kw>
+<kw name="Should Match Regexp" owner="BuiltIn">
+<arg>${TEXTE_Recup}</arg>
+<arg>(?i)${RUBRIQUE}</arg>
+<doc>Fails if ``string`` does not match ``pattern`` as a regular expression.</doc>
+<status status="PASS" start="2025-01-31T16:41:51.643424" elapsed="0.000479"/>
+</kw>
+<arg>${SEARCHED_RESULT_PAGE}</arg>
+<status status="PASS" start="2025-01-31T16:41:51.618404" elapsed="0.025631"/>
+</kw>
+<status status="PASS" start="2025-01-31T16:41:51.618039" elapsed="0.026087"/>
+</kw>
+<kw name="And Les résultats affichés contiennent" owner="keywords">
+<kw name="Get Location" owner="SeleniumLibrary">
+<msg time="2025-01-31T16:41:51.649386" level="INFO">${URL_Locale} = https://automationexercise.com/products?search=Dress</msg>
+<var>${URL_Locale}</var>
+<doc>Returns the current browser window URL.</doc>
+<status status="PASS" start="2025-01-31T16:41:51.644885" elapsed="0.004539"/>
+</kw>
+<kw name="Comparer URL" owner="keywords">
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${URL1}</arg>
+<arg>${URL2}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2025-01-31T16:41:51.650085" elapsed="0.000273"/>
+</kw>
+<arg>${URL_locale}</arg>
+<arg>${URL2}/products?search=${RECHERCHE}</arg>
+<status status="PASS" start="2025-01-31T16:41:51.649607" elapsed="0.000865"/>
+</kw>
+<kw name="Tous les produits contiennent" owner="keywords">
+<kw name="Get WebElements" owner="SeleniumLibrary">
+<msg time="2025-01-31T16:41:51.664390" level="INFO">${PRODUCT_Res} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="939d46c6f7804fc0c81f0dfc39fac1df", element="f.64A977CA680307AE8558B5EE11CA6FA4.d.39ECCC2BE149086D7A67D8D349246AA6.e.443")&gt;, &lt;selenium.webdri...</msg>
+<var>${PRODUCT_Res}</var>
+<arg>//div[@class='overlay-content']/p</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<status status="PASS" start="2025-01-31T16:41:51.651202" elapsed="0.013257"/>
+</kw>
+<kw name="Get Length" owner="BuiltIn">
+<msg time="2025-01-31T16:41:51.665158" level="INFO">Length is 9.</msg>
+<msg time="2025-01-31T16:41:51.665287" level="INFO">${count} = 9</msg>
+<var>${count}</var>
+<arg>${PRODUCT_Res}</arg>
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<status status="PASS" start="2025-01-31T16:41:51.664867" elapsed="0.000464"/>
+</kw>
+<kw name="Should Be True" owner="BuiltIn">
+<arg>${count} &gt; 0</arg>
+<arg>"Aucun produit trouvé !"</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" start="2025-01-31T16:41:51.665517" elapsed="0.000494"/>
+</kw>
+<kw name="Create List" owner="BuiltIn">
+<msg time="2025-01-31T16:41:51.666795" level="INFO">${produits_non_valides} = []</msg>
+<var>${produits_non_valides}</var>
+<doc>Returns a list containing given items.</doc>
+<status status="PASS" start="2025-01-31T16:41:51.666400" elapsed="0.000493"/>
+</kw>
+<for flavor="IN">
+<iter>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2025-01-31T16:41:51.669648" level="INFO">Executing JavaScript:
+return arguments[0].textContent.trim();
+By using argument:
+'&lt;selenium.webdriver.remote.webelement.WebElement (session="939d46c6f7804fc0c81f0dfc39fac1df", element="f.64A977CA680307AE8558B5EE11CA6FA4.d.39ECCC2BE149086D7A67D8D349246AA6.e.443")&gt;'</msg>
+<msg time="2025-01-31T16:41:51.675928" level="INFO">${TXT} = Sleeveless Dress</msg>
+<var>${TXT}</var>
+<arg>return arguments[0].textContent.trim();</arg>
+<arg>ARGUMENTS</arg>
+<arg>${PRD}</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2025-01-31T16:41:51.668375" elapsed="0.007594"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-01-31T16:41:51.676337" level="INFO">Produit trouvé : Sleeveless Dress</msg>
+<arg>Produit trouvé : ${TXT}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-01-31T16:41:51.676169" elapsed="0.000219"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" owner="BuiltIn">
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${TXT}</arg>
+<arg>${RECHERCHE}</arg>
+<arg>"⚠️ Attention : '${TXT}' ne contient pas '${RECHERCHE}' !"</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2025-01-31T16:41:51.676666" elapsed="0.000304"/>
+</kw>
+<arg>Should Contain</arg>
+<arg>${TXT}</arg>
+<arg>${RECHERCHE}</arg>
+<arg>"⚠️ Attention : '${TXT}' ne contient pas '${RECHERCHE}' !"</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<status status="PASS" start="2025-01-31T16:41:51.676502" elapsed="0.000554"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${TXT}</arg>
+<arg>${RECHERCHE}</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2025-01-31T16:41:51.677361" elapsed="0.000167"/>
+</kw>
+<msg time="2025-01-31T16:41:51.677622" level="INFO">${is_valid} = True</msg>
+<var>${is_valid}</var>
+<arg>Should Contain</arg>
+<arg>${TXT}</arg>
+<arg>${RECHERCHE}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2025-01-31T16:41:51.677199" elapsed="0.000451"/>
+</kw>
+<if>
+<branch type="IF" condition="not ${is_valid}">
+<kw name="Append To List" owner="Collections">
+<arg>${produits_non_valides}</arg>
+<arg>${TXT}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="NOT RUN" start="2025-01-31T16:41:51.678022" elapsed="0.000041"/>
+</kw>
+<status status="NOT RUN" start="2025-01-31T16:41:51.677776" elapsed="0.000351"/>
+</branch>
+<status status="PASS" start="2025-01-31T16:41:51.677742" elapsed="0.000446"/>
+</if>
+<var name="${PRD}">&lt;selenium.webdriver.remote.webelement.WebElement (session="939d46c6f7804fc0c81f0dfc39fac1df", element="f.64A977CA680307AE8558B5EE11CA6FA4.d.39ECCC2BE149086D7A67D8D349246AA6.e.443")&gt;</var>
+<status status="PASS" start="2025-01-31T16:41:51.667950" elapsed="0.010278"/>
+</iter>
+<iter>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2025-01-31T16:41:51.679351" level="INFO">Executing JavaScript:
+return arguments[0].textContent.trim();
+By using argument:
+'&lt;selenium.webdriver.remote.webelement.WebElement (session="939d46c6f7804fc0c81f0dfc39fac1df", element="f.64A977CA680307AE8558B5EE11CA6FA4.d.39ECCC2BE149086D7A67D8D349246AA6.e.444")&gt;'</msg>
+<msg time="2025-01-31T16:41:51.684797" level="INFO">${TXT} = Stylish Dress</msg>
+<var>${TXT}</var>
+<arg>return arguments[0].textContent.trim();</arg>
+<arg>ARGUMENTS</arg>
+<arg>${PRD}</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2025-01-31T16:41:51.678583" elapsed="0.006328"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-01-31T16:41:51.685844" level="INFO">Produit trouvé : Stylish Dress</msg>
+<arg>Produit trouvé : ${TXT}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-01-31T16:41:51.685353" elapsed="0.000651"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" owner="BuiltIn">
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${TXT}</arg>
+<arg>${RECHERCHE}</arg>
+<arg>"⚠️ Attention : '${TXT}' ne contient pas '${RECHERCHE}' !"</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2025-01-31T16:41:51.686660" elapsed="0.000314"/>
+</kw>
+<arg>Should Contain</arg>
+<arg>${TXT}</arg>
+<arg>${RECHERCHE}</arg>
+<arg>"⚠️ Attention : '${TXT}' ne contient pas '${RECHERCHE}' !"</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<status status="PASS" start="2025-01-31T16:41:51.686403" elapsed="0.000673"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${TXT}</arg>
+<arg>${RECHERCHE}</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2025-01-31T16:41:51.687410" elapsed="0.000168"/>
+</kw>
+<msg time="2025-01-31T16:41:51.687878" level="INFO">${is_valid} = True</msg>
+<var>${is_valid}</var>
+<arg>Should Contain</arg>
+<arg>${TXT}</arg>
+<arg>${RECHERCHE}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2025-01-31T16:41:51.687254" elapsed="0.000665"/>
+</kw>
+<if>
+<branch type="IF" condition="not ${is_valid}">
+<kw name="Append To List" owner="Collections">
+<arg>${produits_non_valides}</arg>
+<arg>${TXT}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="NOT RUN" start="2025-01-31T16:41:51.688488" elapsed="0.000048"/>
+</kw>
+<status status="NOT RUN" start="2025-01-31T16:41:51.688070" elapsed="0.000528"/>
+</branch>
+<status status="PASS" start="2025-01-31T16:41:51.688031" elapsed="0.000635"/>
+</if>
+<var name="${PRD}">&lt;selenium.webdriver.remote.webelement.WebElement (session="939d46c6f7804fc0c81f0dfc39fac1df", element="f.64A977CA680307AE8558B5EE11CA6FA4.d.39ECCC2BE149086D7A67D8D349246AA6.e.444")&gt;</var>
+<status status="PASS" start="2025-01-31T16:41:51.678464" elapsed="0.010247"/>
+</iter>
+<iter>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2025-01-31T16:41:51.690141" level="INFO">Executing JavaScript:
+return arguments[0].textContent.trim();
+By using argument:
+'&lt;selenium.webdriver.remote.webelement.WebElement (session="939d46c6f7804fc0c81f0dfc39fac1df", element="f.64A977CA680307AE8558B5EE11CA6FA4.d.39ECCC2BE149086D7A67D8D349246AA6.e.445")&gt;'</msg>
+<msg time="2025-01-31T16:41:51.695624" level="INFO">${TXT} = Sleeves Top and Short - Blue &amp; Pink</msg>
+<var>${TXT}</var>
+<arg>return arguments[0].textContent.trim();</arg>
+<arg>ARGUMENTS</arg>
+<arg>${PRD}</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2025-01-31T16:41:51.689420" elapsed="0.006277"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-01-31T16:41:51.696169" level="INFO">Produit trouvé : Sleeves Top and Short - Blue &amp; Pink</msg>
+<arg>Produit trouvé : ${TXT}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-01-31T16:41:51.695927" elapsed="0.000318"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" owner="BuiltIn">
+<kw name="Should Contain" owner="BuiltIn">
+<msg time="2025-01-31T16:41:51.697019" level="FAIL">"⚠️ Attention : 'Sleeves Top and Short - Blue &amp; Pink' ne contient pas 'Dress' !": 'Sleeves Top and Short - Blue &amp; Pink' does not contain 'Dress'</msg>
+<arg>${TXT}</arg>
+<arg>${RECHERCHE}</arg>
+<arg>"⚠️ Attention : '${TXT}' ne contient pas '${RECHERCHE}' !"</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="FAIL" start="2025-01-31T16:41:51.696605" elapsed="0.000627">"⚠️ Attention : 'Sleeves Top and Short - Blue &amp; Pink' ne contient pas 'Dress' !": 'Sleeves Top and Short - Blue &amp; Pink' does not contain 'Dress'</status>
+</kw>
+<arg>Should Contain</arg>
+<arg>${TXT}</arg>
+<arg>${RECHERCHE}</arg>
+<arg>"⚠️ Attention : '${TXT}' ne contient pas '${RECHERCHE}' !"</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<status status="FAIL" start="2025-01-31T16:41:51.696424" elapsed="0.000963">"⚠️ Attention : 'Sleeves Top and Short - Blue &amp; Pink' ne contient pas 'Dress' !": 'Sleeves Top and Short - Blue &amp; Pink' does not contain 'Dress'</status>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Should Contain" owner="BuiltIn">
+<msg time="2025-01-31T16:41:51.697986" level="FAIL">'Sleeves Top and Short - Blue &amp; Pink' does not contain 'Dress'</msg>
+<arg>${TXT}</arg>
+<arg>${RECHERCHE}</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="FAIL" start="2025-01-31T16:41:51.697745" elapsed="0.000332">'Sleeves Top and Short - Blue &amp; Pink' does not contain 'Dress'</status>
+</kw>
+<msg time="2025-01-31T16:41:51.698187" level="INFO">${is_valid} = False</msg>
+<var>${is_valid}</var>
+<arg>Should Contain</arg>
+<arg>${TXT}</arg>
+<arg>${RECHERCHE}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2025-01-31T16:41:51.697578" elapsed="0.000634"/>
+</kw>
+<if>
+<branch type="IF" condition="not ${is_valid}">
+<kw name="Append To List" owner="Collections">
+<arg>${produits_non_valides}</arg>
+<arg>${TXT}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2025-01-31T16:41:51.698584" elapsed="0.000290"/>
+</kw>
+<status status="PASS" start="2025-01-31T16:41:51.698332" elapsed="0.000614"/>
+</branch>
+<status status="PASS" start="2025-01-31T16:41:51.698306" elapsed="0.000702"/>
+</if>
+<var name="${PRD}">&lt;selenium.webdriver.remote.webelement.WebElement (session="939d46c6f7804fc0c81f0dfc39fac1df", element="f.64A977CA680307AE8558B5EE11CA6FA4.d.39ECCC2BE149086D7A67D8D349246AA6.e.445")&gt;</var>
+<status status="FAIL" start="2025-01-31T16:41:51.689070" elapsed="0.010037">"⚠️ Attention : 'Sleeves Top and Short - Blue &amp; Pink' ne contient pas 'Dress' !": 'Sleeves Top and Short - Blue &amp; Pink' does not contain 'Dress'</status>
+</iter>
+<iter>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2025-01-31T16:41:51.700076" level="INFO">Executing JavaScript:
+return arguments[0].textContent.trim();
+By using argument:
+'&lt;selenium.webdriver.remote.webelement.WebElement (session="939d46c6f7804fc0c81f0dfc39fac1df", element="f.64A977CA680307AE8558B5EE11CA6FA4.d.39ECCC2BE149086D7A67D8D349246AA6.e.446")&gt;'</msg>
+<msg time="2025-01-31T16:41:51.705755" level="INFO">${TXT} = Sleeveless Unicorn Patch Gown - Pink</msg>
+<var>${TXT}</var>
+<arg>return arguments[0].textContent.trim();</arg>
+<arg>ARGUMENTS</arg>
+<arg>${PRD}</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2025-01-31T16:41:51.699504" elapsed="0.006325"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-01-31T16:41:51.706392" level="INFO">Produit trouvé : Sleeveless Unicorn Patch Gown - Pink</msg>
+<arg>Produit trouvé : ${TXT}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-01-31T16:41:51.706127" elapsed="0.000362"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" owner="BuiltIn">
+<kw name="Should Contain" owner="BuiltIn">
+<msg time="2025-01-31T16:41:51.707300" level="FAIL">"⚠️ Attention : 'Sleeveless Unicorn Patch Gown - Pink' ne contient pas 'Dress' !": 'Sleeveless Unicorn Patch Gown - Pink' does not contain 'Dress'</msg>
+<arg>${TXT}</arg>
+<arg>${RECHERCHE}</arg>
+<arg>"⚠️ Attention : '${TXT}' ne contient pas '${RECHERCHE}' !"</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="FAIL" start="2025-01-31T16:41:51.706874" elapsed="0.000553">"⚠️ Attention : 'Sleeveless Unicorn Patch Gown - Pink' ne contient pas 'Dress' !": 'Sleeveless Unicorn Patch Gown - Pink' does not contain 'Dress'</status>
+</kw>
+<arg>Should Contain</arg>
+<arg>${TXT}</arg>
+<arg>${RECHERCHE}</arg>
+<arg>"⚠️ Attention : '${TXT}' ne contient pas '${RECHERCHE}' !"</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<status status="FAIL" start="2025-01-31T16:41:51.706662" elapsed="0.000901">"⚠️ Attention : 'Sleeveless Unicorn Patch Gown - Pink' ne contient pas 'Dress' !": 'Sleeveless Unicorn Patch Gown - Pink' does not contain 'Dress'</status>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Should Contain" owner="BuiltIn">
+<msg time="2025-01-31T16:41:51.708373" level="FAIL">'Sleeveless Unicorn Patch Gown - Pink' does not contain 'Dress'</msg>
+<arg>${TXT}</arg>
+<arg>${RECHERCHE}</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="FAIL" start="2025-01-31T16:41:51.707967" elapsed="0.000664">'Sleeveless Unicorn Patch Gown - Pink' does not contain 'Dress'</status>
+</kw>
+<msg time="2025-01-31T16:41:51.709108" level="INFO">${is_valid} = False</msg>
+<var>${is_valid}</var>
+<arg>Should Contain</arg>
+<arg>${TXT}</arg>
+<arg>${RECHERCHE}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2025-01-31T16:41:51.707772" elapsed="0.001392"/>
+</kw>
+<if>
+<branch type="IF" condition="not ${is_valid}">
+<kw name="Append To List" owner="Collections">
+<arg>${produits_non_valides}</arg>
+<arg>${TXT}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2025-01-31T16:41:51.709761" elapsed="0.000293"/>
+</kw>
+<status status="PASS" start="2025-01-31T16:41:51.709368" elapsed="0.000770"/>
+</branch>
+<status status="PASS" start="2025-01-31T16:41:51.709325" elapsed="0.000887"/>
+</if>
+<var name="${PRD}">&lt;selenium.webdriver.remote.webelement.WebElement (session="939d46c6f7804fc0c81f0dfc39fac1df", element="f.64A977CA680307AE8558B5EE11CA6FA4.d.39ECCC2BE149086D7A67D8D349246AA6.e.446")&gt;</var>
+<status status="FAIL" start="2025-01-31T16:41:51.699357" elapsed="0.010938">"⚠️ Attention : 'Sleeveless Unicorn Patch Gown - Pink' ne contient pas 'Dress' !": 'Sleeveless Unicorn Patch Gown - Pink' does not contain 'Dress'</status>
+</iter>
+<iter>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2025-01-31T16:41:51.712304" level="INFO">Executing JavaScript:
+return arguments[0].textContent.trim();
+By using argument:
+'&lt;selenium.webdriver.remote.webelement.WebElement (session="939d46c6f7804fc0c81f0dfc39fac1df", element="f.64A977CA680307AE8558B5EE11CA6FA4.d.39ECCC2BE149086D7A67D8D349246AA6.e.447")&gt;'</msg>
+<msg time="2025-01-31T16:41:51.718979" level="INFO">${TXT} = Cotton Mull Embroidered Dress</msg>
+<var>${TXT}</var>
+<arg>return arguments[0].textContent.trim();</arg>
+<arg>ARGUMENTS</arg>
+<arg>${PRD}</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2025-01-31T16:41:51.711025" elapsed="0.008002"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-01-31T16:41:51.719406" level="INFO">Produit trouvé : Cotton Mull Embroidered Dress</msg>
+<arg>Produit trouvé : ${TXT}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-01-31T16:41:51.719239" elapsed="0.000220"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" owner="BuiltIn">
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${TXT}</arg>
+<arg>${RECHERCHE}</arg>
+<arg>"⚠️ Attention : '${TXT}' ne contient pas '${RECHERCHE}' !"</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2025-01-31T16:41:51.719775" elapsed="0.000435"/>
+</kw>
+<arg>Should Contain</arg>
+<arg>${TXT}</arg>
+<arg>${RECHERCHE}</arg>
+<arg>"⚠️ Attention : '${TXT}' ne contient pas '${RECHERCHE}' !"</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<status status="PASS" start="2025-01-31T16:41:51.719581" elapsed="0.000740"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${TXT}</arg>
+<arg>${RECHERCHE}</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2025-01-31T16:41:51.720729" elapsed="0.000225"/>
+</kw>
+<msg time="2025-01-31T16:41:51.721078" level="INFO">${is_valid} = True</msg>
+<var>${is_valid}</var>
+<arg>Should Contain</arg>
+<arg>${TXT}</arg>
+<arg>${RECHERCHE}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2025-01-31T16:41:51.720508" elapsed="0.000605"/>
+</kw>
+<if>
+<branch type="IF" condition="not ${is_valid}">
+<kw name="Append To List" owner="Collections">
+<arg>${produits_non_valides}</arg>
+<arg>${TXT}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="NOT RUN" start="2025-01-31T16:41:51.721474" elapsed="0.000028"/>
+</kw>
+<status status="NOT RUN" start="2025-01-31T16:41:51.721238" elapsed="0.000317"/>
+</branch>
+<status status="PASS" start="2025-01-31T16:41:51.721206" elapsed="0.000384"/>
+</if>
+<var name="${PRD}">&lt;selenium.webdriver.remote.webelement.WebElement (session="939d46c6f7804fc0c81f0dfc39fac1df", element="f.64A977CA680307AE8558B5EE11CA6FA4.d.39ECCC2BE149086D7A67D8D349246AA6.e.447")&gt;</var>
+<status status="PASS" start="2025-01-31T16:41:51.710683" elapsed="0.010928"/>
+</iter>
+<iter>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2025-01-31T16:41:51.722446" level="INFO">Executing JavaScript:
+return arguments[0].textContent.trim();
+By using argument:
+'&lt;selenium.webdriver.remote.webelement.WebElement (session="939d46c6f7804fc0c81f0dfc39fac1df", element="f.64A977CA680307AE8558B5EE11CA6FA4.d.39ECCC2BE149086D7A67D8D349246AA6.e.448")&gt;'</msg>
+<msg time="2025-01-31T16:41:51.728684" level="INFO">${TXT} = Blue Cotton Indie Mickey Dress</msg>
+<var>${TXT}</var>
+<arg>return arguments[0].textContent.trim();</arg>
+<arg>ARGUMENTS</arg>
+<arg>${PRD}</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2025-01-31T16:41:51.721965" elapsed="0.006768"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-01-31T16:41:51.729145" level="INFO">Produit trouvé : Blue Cotton Indie Mickey Dress</msg>
+<arg>Produit trouvé : ${TXT}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-01-31T16:41:51.728936" elapsed="0.000277"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" owner="BuiltIn">
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${TXT}</arg>
+<arg>${RECHERCHE}</arg>
+<arg>"⚠️ Attention : '${TXT}' ne contient pas '${RECHERCHE}' !"</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2025-01-31T16:41:51.729614" elapsed="0.000423"/>
+</kw>
+<arg>Should Contain</arg>
+<arg>${TXT}</arg>
+<arg>${RECHERCHE}</arg>
+<arg>"⚠️ Attention : '${TXT}' ne contient pas '${RECHERCHE}' !"</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<status status="PASS" start="2025-01-31T16:41:51.729378" elapsed="0.000748"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${TXT}</arg>
+<arg>${RECHERCHE}</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2025-01-31T16:41:51.730506" elapsed="0.000207"/>
+</kw>
+<msg time="2025-01-31T16:41:51.730839" level="INFO">${is_valid} = True</msg>
+<var>${is_valid}</var>
+<arg>Should Contain</arg>
+<arg>${TXT}</arg>
+<arg>${RECHERCHE}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2025-01-31T16:41:51.730312" elapsed="0.000567"/>
+</kw>
+<if>
+<branch type="IF" condition="not ${is_valid}">
+<kw name="Append To List" owner="Collections">
+<arg>${produits_non_valides}</arg>
+<arg>${TXT}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="NOT RUN" start="2025-01-31T16:41:51.731261" elapsed="0.000029"/>
+</kw>
+<status status="NOT RUN" start="2025-01-31T16:41:51.730992" elapsed="0.000359"/>
+</branch>
+<status status="PASS" start="2025-01-31T16:41:51.730958" elapsed="0.000461"/>
+</if>
+<var name="${PRD}">&lt;selenium.webdriver.remote.webelement.WebElement (session="939d46c6f7804fc0c81f0dfc39fac1df", element="f.64A977CA680307AE8558B5EE11CA6FA4.d.39ECCC2BE149086D7A67D8D349246AA6.e.448")&gt;</var>
+<status status="PASS" start="2025-01-31T16:41:51.721808" elapsed="0.009654"/>
+</iter>
+<iter>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2025-01-31T16:41:51.733007" level="INFO">Executing JavaScript:
+return arguments[0].textContent.trim();
+By using argument:
+'&lt;selenium.webdriver.remote.webelement.WebElement (session="939d46c6f7804fc0c81f0dfc39fac1df", element="f.64A977CA680307AE8558B5EE11CA6FA4.d.39ECCC2BE149086D7A67D8D349246AA6.e.449")&gt;'</msg>
+<msg time="2025-01-31T16:41:51.740756" level="INFO">${TXT} = Long Maxi Tulle Fancy Dress Up Outfits -Pink</msg>
+<var>${TXT}</var>
+<arg>return arguments[0].textContent.trim();</arg>
+<arg>ARGUMENTS</arg>
+<arg>${PRD}</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2025-01-31T16:41:51.731962" elapsed="0.008898"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-01-31T16:41:51.741385" level="INFO">Produit trouvé : Long Maxi Tulle Fancy Dress Up Outfits -Pink</msg>
+<arg>Produit trouvé : ${TXT}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-01-31T16:41:51.741176" elapsed="0.000276"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" owner="BuiltIn">
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${TXT}</arg>
+<arg>${RECHERCHE}</arg>
+<arg>"⚠️ Attention : '${TXT}' ne contient pas '${RECHERCHE}' !"</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2025-01-31T16:41:51.741826" elapsed="0.000315"/>
+</kw>
+<arg>Should Contain</arg>
+<arg>${TXT}</arg>
+<arg>${RECHERCHE}</arg>
+<arg>"⚠️ Attention : '${TXT}' ne contient pas '${RECHERCHE}' !"</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<status status="PASS" start="2025-01-31T16:41:51.741632" elapsed="0.000590"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${TXT}</arg>
+<arg>${RECHERCHE}</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2025-01-31T16:41:51.742602" elapsed="0.000207"/>
+</kw>
+<msg time="2025-01-31T16:41:51.742940" level="INFO">${is_valid} = True</msg>
+<var>${is_valid}</var>
+<arg>Should Contain</arg>
+<arg>${TXT}</arg>
+<arg>${RECHERCHE}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2025-01-31T16:41:51.742416" elapsed="0.000569"/>
+</kw>
+<if>
+<branch type="IF" condition="not ${is_valid}">
+<kw name="Append To List" owner="Collections">
+<arg>${produits_non_valides}</arg>
+<arg>${TXT}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="NOT RUN" start="2025-01-31T16:41:51.743375" elapsed="0.000040"/>
+</kw>
+<status status="NOT RUN" start="2025-01-31T16:41:51.743116" elapsed="0.000359"/>
+</branch>
+<status status="PASS" start="2025-01-31T16:41:51.743082" elapsed="0.000452"/>
+</if>
+<var name="${PRD}">&lt;selenium.webdriver.remote.webelement.WebElement (session="939d46c6f7804fc0c81f0dfc39fac1df", element="f.64A977CA680307AE8558B5EE11CA6FA4.d.39ECCC2BE149086D7A67D8D349246AA6.e.449")&gt;</var>
+<status status="PASS" start="2025-01-31T16:41:51.731659" elapsed="0.011923"/>
+</iter>
+<iter>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2025-01-31T16:41:51.744476" level="INFO">Executing JavaScript:
+return arguments[0].textContent.trim();
+By using argument:
+'&lt;selenium.webdriver.remote.webelement.WebElement (session="939d46c6f7804fc0c81f0dfc39fac1df", element="f.64A977CA680307AE8558B5EE11CA6FA4.d.39ECCC2BE149086D7A67D8D349246AA6.e.450")&gt;'</msg>
+<msg time="2025-01-31T16:41:51.749340" level="INFO">${TXT} = Sleeveless Unicorn Print Fit &amp; Flare Net Dress - Multi</msg>
+<var>${TXT}</var>
+<arg>return arguments[0].textContent.trim();</arg>
+<arg>ARGUMENTS</arg>
+<arg>${PRD}</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2025-01-31T16:41:51.743946" elapsed="0.005433"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-01-31T16:41:51.749703" level="INFO">Produit trouvé : Sleeveless Unicorn Print Fit &amp; Flare Net Dress - Multi</msg>
+<arg>Produit trouvé : ${TXT}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-01-31T16:41:51.749541" elapsed="0.000220"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" owner="BuiltIn">
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${TXT}</arg>
+<arg>${RECHERCHE}</arg>
+<arg>"⚠️ Attention : '${TXT}' ne contient pas '${RECHERCHE}' !"</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2025-01-31T16:41:51.750056" elapsed="0.000252"/>
+</kw>
+<arg>Should Contain</arg>
+<arg>${TXT}</arg>
+<arg>${RECHERCHE}</arg>
+<arg>"⚠️ Attention : '${TXT}' ne contient pas '${RECHERCHE}' !"</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<status status="PASS" start="2025-01-31T16:41:51.749896" elapsed="0.000511"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${TXT}</arg>
+<arg>${RECHERCHE}</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2025-01-31T16:41:51.750686" elapsed="0.000210"/>
+</kw>
+<msg time="2025-01-31T16:41:51.751022" level="INFO">${is_valid} = True</msg>
+<var>${is_valid}</var>
+<arg>Should Contain</arg>
+<arg>${TXT}</arg>
+<arg>${RECHERCHE}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2025-01-31T16:41:51.750535" elapsed="0.000526"/>
+</kw>
+<if>
+<branch type="IF" condition="not ${is_valid}">
+<kw name="Append To List" owner="Collections">
+<arg>${produits_non_valides}</arg>
+<arg>${TXT}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="NOT RUN" start="2025-01-31T16:41:51.751400" elapsed="0.000040"/>
+</kw>
+<status status="NOT RUN" start="2025-01-31T16:41:51.751200" elapsed="0.000284"/>
+</branch>
+<status status="PASS" start="2025-01-31T16:41:51.751168" elapsed="0.000360"/>
+</if>
+<var name="${PRD}">&lt;selenium.webdriver.remote.webelement.WebElement (session="939d46c6f7804fc0c81f0dfc39fac1df", element="f.64A977CA680307AE8558B5EE11CA6FA4.d.39ECCC2BE149086D7A67D8D349246AA6.e.450")&gt;</var>
+<status status="PASS" start="2025-01-31T16:41:51.743802" elapsed="0.007770"/>
+</iter>
+<iter>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2025-01-31T16:41:51.752315" level="INFO">Executing JavaScript:
+return arguments[0].textContent.trim();
+By using argument:
+'&lt;selenium.webdriver.remote.webelement.WebElement (session="939d46c6f7804fc0c81f0dfc39fac1df", element="f.64A977CA680307AE8558B5EE11CA6FA4.d.39ECCC2BE149086D7A67D8D349246AA6.e.451")&gt;'</msg>
+<msg time="2025-01-31T16:41:51.758340" level="INFO">${TXT} = Rose Pink Embroidered Maxi Dress</msg>
+<var>${TXT}</var>
+<arg>return arguments[0].textContent.trim();</arg>
+<arg>ARGUMENTS</arg>
+<arg>${PRD}</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2025-01-31T16:41:51.751869" elapsed="0.006517"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-01-31T16:41:51.758826" level="INFO">Produit trouvé : Rose Pink Embroidered Maxi Dress</msg>
+<arg>Produit trouvé : ${TXT}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-01-31T16:41:51.758617" elapsed="0.000267"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" owner="BuiltIn">
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${TXT}</arg>
+<arg>${RECHERCHE}</arg>
+<arg>"⚠️ Attention : '${TXT}' ne contient pas '${RECHERCHE}' !"</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2025-01-31T16:41:51.759198" elapsed="0.000256"/>
+</kw>
+<arg>Should Contain</arg>
+<arg>${TXT}</arg>
+<arg>${RECHERCHE}</arg>
+<arg>"⚠️ Attention : '${TXT}' ne contient pas '${RECHERCHE}' !"</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<status status="PASS" start="2025-01-31T16:41:51.759012" elapsed="0.000510"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${TXT}</arg>
+<arg>${RECHERCHE}</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2025-01-31T16:41:51.759865" elapsed="0.000215"/>
+</kw>
+<msg time="2025-01-31T16:41:51.760282" level="INFO">${is_valid} = True</msg>
+<var>${is_valid}</var>
+<arg>Should Contain</arg>
+<arg>${TXT}</arg>
+<arg>${RECHERCHE}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2025-01-31T16:41:51.759674" elapsed="0.000650"/>
+</kw>
+<if>
+<branch type="IF" condition="not ${is_valid}">
+<kw name="Append To List" owner="Collections">
+<arg>${produits_non_valides}</arg>
+<arg>${TXT}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="NOT RUN" start="2025-01-31T16:41:51.760719" elapsed="0.000031"/>
+</kw>
+<status status="NOT RUN" start="2025-01-31T16:41:51.760457" elapsed="0.000333"/>
+</branch>
+<status status="PASS" start="2025-01-31T16:41:51.760424" elapsed="0.000411"/>
+</if>
+<var name="${PRD}">&lt;selenium.webdriver.remote.webelement.WebElement (session="939d46c6f7804fc0c81f0dfc39fac1df", element="f.64A977CA680307AE8558B5EE11CA6FA4.d.39ECCC2BE149086D7A67D8D349246AA6.e.451")&gt;</var>
+<status status="PASS" start="2025-01-31T16:41:51.751760" elapsed="0.009109"/>
+</iter>
+<var>${PRD}</var>
+<value>@{PRODUCT_Res}</value>
+<status status="FAIL" start="2025-01-31T16:41:51.667153" elapsed="0.093860">Several failures occurred:
+
+1) "⚠️ Attention : 'Sleeves Top and Short - Blue &amp; Pink' ne contient pas 'Dress' !": 'Sleeves Top and Short - Blue &amp; Pink' does not contain 'Dress'
+
+2) "⚠️ Attention : 'Sleeveless Unicorn Patch Gown - Pink' ne contient pas 'Dress' !": 'Sleeveless Unicorn Patch Gown - Pink' does not contain 'Dress'</status>
+</for>
+<kw name="Get Length" owner="BuiltIn">
+<msg time="2025-01-31T16:41:51.761406" level="INFO">Length is 2.</msg>
+<msg time="2025-01-31T16:41:51.761509" level="INFO">${nb_non_valides} = 2</msg>
+<var>${nb_non_valides}</var>
+<arg>${produits_non_valides}</arg>
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<status status="PASS" start="2025-01-31T16:41:51.761210" elapsed="0.000341"/>
+</kw>
+<if>
+<branch type="IF" condition="${nb_non_valides} &gt; 0">
+<kw name="Log Many" owner="BuiltIn">
+<msg time="2025-01-31T16:41:51.762081" level="INFO">⚠️ Attention : Les produits suivants ne contiennent pas 'Dress':</msg>
+<msg time="2025-01-31T16:41:51.762152" level="INFO">Sleeves Top and Short - Blue &amp; Pink</msg>
+<msg time="2025-01-31T16:41:51.762198" level="INFO">Sleeveless Unicorn Patch Gown - Pink</msg>
+<arg>⚠️ Attention : Les produits suivants ne contiennent pas '${RECHERCHE}':</arg>
+<arg>@{produits_non_valides}</arg>
+<doc>Logs the given messages as separate entries using the INFO level.</doc>
+<status status="PASS" start="2025-01-31T16:41:51.761922" elapsed="0.000341"/>
+</kw>
+<status status="PASS" start="2025-01-31T16:41:51.761683" elapsed="0.000646"/>
+</branch>
+<status status="PASS" start="2025-01-31T16:41:51.761643" elapsed="0.000739"/>
+</if>
+<arg>${RECHERCHE}</arg>
+<status status="FAIL" start="2025-01-31T16:41:51.650836" elapsed="0.111695">Several failures occurred:
+
+1) "⚠️ Attention : 'Sleeves Top and Short - Blue &amp; Pink' ne contient pas 'Dress' !": 'Sleeves Top and Short - Blue &amp; Pink' does not contain 'Dress'
+
+2) "⚠️ Attention : 'Sleeveless Unicorn Patch Gown - Pink' ne contient pas 'Dress' !": 'Sleeveless Unicorn Patch Gown - Pink' does not contain 'Dress'</status>
+</kw>
+<arg>${SEARCHED_PRODUCT}</arg>
+<status status="FAIL" start="2025-01-31T16:41:51.644497" elapsed="0.118205">Several failures occurred:
+
+1) "⚠️ Attention : 'Sleeves Top and Short - Blue &amp; Pink' ne contient pas 'Dress' !": 'Sleeves Top and Short - Blue &amp; Pink' does not contain 'Dress'
+
+2) "⚠️ Attention : 'Sleeveless Unicorn Patch Gown - Pink' ne contient pas 'Dress' !": 'Sleeveless Unicorn Patch Gown - Pink' does not contain 'Dress'</status>
+</kw>
+<status status="FAIL" start="2025-01-31T16:41:41.961100" elapsed="9.802011">Several failures occurred:
+
+1) "⚠️ Attention : 'Sleeves Top and Short - Blue &amp; Pink' ne contient pas 'Dress' !": 'Sleeves Top and Short - Blue &amp; Pink' does not contain 'Dress'
+
+2) "⚠️ Attention : 'Sleeveless Unicorn Patch Gown - Pink' ne contient pas 'Dress' !": 'Sleeveless Unicorn Patch Gown - Pink' does not contain 'Dress'</status>
+</test>
+<test id="s1-t2" name="Scenario : 3-2 - Vérifier les détails de l'adresse sur la page de paiement" line="31">
+<kw name="Given Le navigateur est lancé" owner="keywords">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-01-31T16:41:51.765835" level="INFO">Opening browser 'Chrome' to base url 'about:blank'.</msg>
+<arg>about:blank</arg>
+<arg>${NAV}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-01-31T16:41:51.765576" elapsed="1.347554"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-01-31T16:41:53.113379" elapsed="0.030655"/>
+</kw>
+<status status="PASS" start="2025-01-31T16:41:51.765226" elapsed="1.378966"/>
+</kw>
+<kw name="And L'utilisateur accède à &quot;http://automationexercise.com&quot;" owner="keywords">
+<kw name="Acceder au site" owner="keywords">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-01-31T16:41:53.145843" level="INFO">Opening url 'https://automationexercise.com'</msg>
+<arg>${URL2}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-01-31T16:41:53.145650" elapsed="1.399293"/>
+</kw>
+<status status="PASS" start="2025-01-31T16:41:53.145244" elapsed="1.399842"/>
+</kw>
+<kw name="Gerer les cookies" owner="keywords">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-01-31T16:41:55.545830" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-01-31T16:41:54.545535" elapsed="1.000447"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-01-31T16:41:55.568852" level="INFO">Element '//div[contains(@class, 'fc-consent-root')]' is displayed.</msg>
+<arg>//div[contains(@class, 'fc-consent-root')]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-01-31T16:41:55.546557" elapsed="0.022513"/>
+</kw>
+<msg time="2025-01-31T16:41:55.569348" level="INFO">${popup_visible} = True</msg>
+<var>${popup_visible}</var>
+<arg>Element Should Be Visible</arg>
+<arg>//div[contains(@class, 'fc-consent-root')]</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2025-01-31T16:41:55.546231" elapsed="0.023179"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-01-31T16:41:55.570429" level="INFO">Clicking element '//button[contains(@class, 'fc-cta-consent')]'.</msg>
+<arg>//button[contains(@class, 'fc-cta-consent')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-31T16:41:55.570182" elapsed="0.103808"/>
+</kw>
+<arg>${popup_visible}</arg>
+<arg>Click Element</arg>
+<arg>//button[contains(@class, 'fc-cta-consent')]</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2025-01-31T16:41:55.569778" elapsed="0.104560"/>
+</kw>
+<status status="PASS" start="2025-01-31T16:41:54.545260" elapsed="1.129246"/>
+</kw>
+<status status="PASS" start="2025-01-31T16:41:53.144636" elapsed="2.529954"/>
+</kw>
+<kw name="Then La page d'accueil est visible" owner="keywords">
+<kw name="NavElement is colored" owner="keywords">
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2025-01-31T16:41:55.698186" level="INFO">${color} = color: orange;</msg>
+<var>${color}</var>
+<arg>${XPATH}</arg>
+<arg>style</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2025-01-31T16:41:55.675846" elapsed="0.022430"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${color}</arg>
+<arg>color: ${COULEUR}</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2025-01-31T16:41:55.698567" elapsed="0.000249"/>
+</kw>
+<arg>${NAVCOLOR}</arg>
+<arg>${HOME_XPATH}</arg>
+<status status="PASS" start="2025-01-31T16:41:55.675430" elapsed="0.023485"/>
+</kw>
+<status status="PASS" start="2025-01-31T16:41:55.675053" elapsed="0.023957"/>
+</kw>
+<kw name="When L'utilisateur clique sur le bouton" owner="keywords">
+<kw name="Clic sur element" owner="keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${XPATH_ELT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-01-31T16:41:55.700107" elapsed="0.022730"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-01-31T16:41:55.723448" level="INFO">Clicking element '//a[contains(text(), 'Signup / Login')]'.</msg>
+<arg>${XPATH_ELT}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-31T16:41:55.723105" elapsed="1.356988"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-01-31T16:41:59.080939" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-01-31T16:41:57.080315" elapsed="2.000792"/>
+</kw>
+<arg>//a[contains(text(), '${PRODUCTS_RUBRIQUE}')]</arg>
+<status status="PASS" start="2025-01-31T16:41:55.699724" elapsed="3.381513"/>
+</kw>
+<arg>${INSCRIPTION_TERMINOLOGY}</arg>
+<status status="PASS" start="2025-01-31T16:41:55.699338" elapsed="3.382014"/>
+</kw>
+<kw name="Then L'utilisateur est redirigé avec succès vers la page &quot;INSCRIPTION/CONNEXION&quot;" owner="keywords">
+<kw name="Get Location" owner="SeleniumLibrary">
+<msg time="2025-01-31T16:41:59.088342" level="INFO">${URL_Locale} = https://automationexercise.com/login</msg>
+<var>${URL_Locale}</var>
+<doc>Returns the current browser window URL.</doc>
+<status status="PASS" start="2025-01-31T16:41:59.082198" elapsed="0.006212"/>
+</kw>
+<kw name="Comparer URL" owner="keywords">
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${URL1}</arg>
+<arg>${URL2}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2025-01-31T16:41:59.089114" elapsed="0.000255"/>
+</kw>
+<arg>${URL_locale}</arg>
+<arg>${URL2}/login</arg>
+<status status="PASS" start="2025-01-31T16:41:59.088672" elapsed="0.000799"/>
+</kw>
+<status status="PASS" start="2025-01-31T16:41:59.081796" elapsed="0.007765"/>
+</kw>
+<kw name="When User fill the register inputs" owner="keywords">
+<for flavor="IN">
+<iter>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Fill Input If Exists" owner="keywords">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-01-31T16:41:59.091563" level="INFO">${LOCATOR} = //form[@action='/signup']//input[@name='name']</msg>
+<var>${LOCATOR}</var>
+<arg>//form[@action='${FORM}']//input[@name='${NAME}']</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-01-31T16:41:59.091325" elapsed="0.000295"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-01-31T16:41:59.107982" level="INFO">Element '//form[@action='/signup']//input[@name='name']' is displayed.</msg>
+<arg>${LOCATOR}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-01-31T16:41:59.091968" elapsed="0.016105"/>
+</kw>
+<msg time="2025-01-31T16:41:59.108219" level="INFO">${ELEMENT_EXISTS} = True</msg>
+<var>${ELEMENT_EXISTS}</var>
+<arg>Element Should Be Visible</arg>
+<arg>${LOCATOR}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2025-01-31T16:41:59.091779" elapsed="0.016465"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-01-31T16:41:59.108924" level="INFO">Typing text 'Biscotte' into text field '//form[@action='/signup']//input[@name='name']'.</msg>
+<arg>${LOCATOR}</arg>
+<arg>${VALUE}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-31T16:41:59.108666" elapsed="0.092527"/>
+</kw>
+<arg>${ELEMENT_EXISTS}</arg>
+<arg>Input Text</arg>
+<arg>${LOCATOR}</arg>
+<arg>${VALUE}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2025-01-31T16:41:59.108438" elapsed="0.092874"/>
+</kw>
+<arg>${name}</arg>
+<arg>${value}</arg>
+<arg>${FORM}</arg>
+<status status="PASS" start="2025-01-31T16:41:59.090941" elapsed="0.110485"/>
+</kw>
+<arg>Fill Input If Exists</arg>
+<arg>${name}</arg>
+<arg>${value}</arg>
+<arg>${FORM}</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2025-01-31T16:41:59.090746" elapsed="0.110763"/>
+</kw>
+<var name="${name}">name</var>
+<var name="${value}">Biscotte</var>
+<status status="PASS" start="2025-01-31T16:41:59.090628" elapsed="0.110940"/>
+</iter>
+<iter>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Fill Input If Exists" owner="keywords">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-01-31T16:41:59.202876" level="INFO">${LOCATOR} = //form[@action='/signup']//input[@name='email']</msg>
+<var>${LOCATOR}</var>
+<arg>//form[@action='${FORM}']//input[@name='${NAME}']</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-01-31T16:41:59.202619" elapsed="0.000305"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-01-31T16:41:59.217991" level="INFO">Element '//form[@action='/signup']//input[@name='email']' is displayed.</msg>
+<arg>${LOCATOR}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-01-31T16:41:59.203307" elapsed="0.014796"/>
+</kw>
+<msg time="2025-01-31T16:41:59.218419" level="INFO">${ELEMENT_EXISTS} = True</msg>
+<var>${ELEMENT_EXISTS}</var>
+<arg>Element Should Be Visible</arg>
+<arg>${LOCATOR}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2025-01-31T16:41:59.203128" elapsed="0.015324"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-01-31T16:41:59.219128" level="INFO">Typing text 'zebiscotte@lolmail.com' into text field '//form[@action='/signup']//input[@name='email']'.</msg>
+<arg>${LOCATOR}</arg>
+<arg>${VALUE}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-31T16:41:59.218905" elapsed="0.114458"/>
+</kw>
+<arg>${ELEMENT_EXISTS}</arg>
+<arg>Input Text</arg>
+<arg>${LOCATOR}</arg>
+<arg>${VALUE}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2025-01-31T16:41:59.218639" elapsed="0.114871"/>
+</kw>
+<arg>${name}</arg>
+<arg>${value}</arg>
+<arg>${FORM}</arg>
+<status status="PASS" start="2025-01-31T16:41:59.202184" elapsed="0.131411"/>
+</kw>
+<arg>Fill Input If Exists</arg>
+<arg>${name}</arg>
+<arg>${value}</arg>
+<arg>${FORM}</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2025-01-31T16:41:59.201920" elapsed="0.131756"/>
+</kw>
+<var name="${name}">email</var>
+<var name="${value}">zebiscotte@lolmail.com</var>
+<status status="PASS" start="2025-01-31T16:41:59.201762" elapsed="0.131974"/>
+</iter>
+<iter>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Fill Input If Exists" owner="keywords">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-01-31T16:41:59.335115" level="INFO">${LOCATOR} = //form[@action='/signup']//input[@name='last_name']</msg>
+<var>${LOCATOR}</var>
+<arg>//form[@action='${FORM}']//input[@name='${NAME}']</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-01-31T16:41:59.334856" elapsed="0.000315"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-01-31T16:41:59.474820" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-473.png"&gt;&lt;img src="selenium-screenshot-473.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-01-31T16:41:59.474968" level="FAIL">Element with locator '//form[@action='/signup']//input[@name='last_name']' not found.</msg>
+<arg>${LOCATOR}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="FAIL" start="2025-01-31T16:41:59.335530" elapsed="0.141971">Element with locator '//form[@action='/signup']//input[@name='last_name']' not found.</status>
+</kw>
+<msg time="2025-01-31T16:41:59.477664" level="INFO">${ELEMENT_EXISTS} = False</msg>
+<var>${ELEMENT_EXISTS}</var>
+<arg>Element Should Be Visible</arg>
+<arg>${LOCATOR}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2025-01-31T16:41:59.335342" elapsed="0.142352"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>${ELEMENT_EXISTS}</arg>
+<arg>Input Text</arg>
+<arg>${LOCATOR}</arg>
+<arg>${VALUE}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2025-01-31T16:41:59.477885" elapsed="0.000188"/>
+</kw>
+<arg>${name}</arg>
+<arg>${value}</arg>
+<arg>${FORM}</arg>
+<status status="PASS" start="2025-01-31T16:41:59.334369" elapsed="0.143794"/>
+</kw>
+<arg>Fill Input If Exists</arg>
+<arg>${name}</arg>
+<arg>${value}</arg>
+<arg>${FORM}</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2025-01-31T16:41:59.334094" elapsed="0.144147"/>
+</kw>
+<var name="${name}">last_name</var>
+<var name="${value}">Biscotte</var>
+<status status="PASS" start="2025-01-31T16:41:59.333937" elapsed="0.144358"/>
+</iter>
+<iter>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Fill Input If Exists" owner="keywords">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-01-31T16:41:59.479454" level="INFO">${LOCATOR} = //form[@action='/signup']//input[@name='first_name']</msg>
+<var>${LOCATOR}</var>
+<arg>//form[@action='${FORM}']//input[@name='${NAME}']</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-01-31T16:41:59.479205" elapsed="0.000301"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-01-31T16:41:59.624870" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-474.png"&gt;&lt;img src="selenium-screenshot-474.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-01-31T16:41:59.625065" level="FAIL">Element with locator '//form[@action='/signup']//input[@name='first_name']' not found.</msg>
+<arg>${LOCATOR}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="FAIL" start="2025-01-31T16:41:59.479832" elapsed="0.146485">Element with locator '//form[@action='/signup']//input[@name='first_name']' not found.</status>
+</kw>
+<msg time="2025-01-31T16:41:59.626456" level="INFO">${ELEMENT_EXISTS} = False</msg>
+<var>${ELEMENT_EXISTS}</var>
+<arg>Element Should Be Visible</arg>
+<arg>${LOCATOR}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2025-01-31T16:41:59.479653" elapsed="0.146852"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>${ELEMENT_EXISTS}</arg>
+<arg>Input Text</arg>
+<arg>${LOCATOR}</arg>
+<arg>${VALUE}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2025-01-31T16:41:59.626653" elapsed="0.000166"/>
+</kw>
+<arg>${name}</arg>
+<arg>${value}</arg>
+<arg>${FORM}</arg>
+<status status="PASS" start="2025-01-31T16:41:59.478824" elapsed="0.148072"/>
+</kw>
+<arg>Fill Input If Exists</arg>
+<arg>${name}</arg>
+<arg>${value}</arg>
+<arg>${FORM}</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2025-01-31T16:41:59.478585" elapsed="0.148378"/>
+</kw>
+<var name="${name}">first_name</var>
+<var name="${value}">Johnny</var>
+<status status="PASS" start="2025-01-31T16:41:59.478451" elapsed="0.148565"/>
+</iter>
+<iter>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Fill Input If Exists" owner="keywords">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-01-31T16:41:59.628087" level="INFO">${LOCATOR} = //form[@action='/signup']//input[@name='address1']</msg>
+<var>${LOCATOR}</var>
+<arg>//form[@action='${FORM}']//input[@name='${NAME}']</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-01-31T16:41:59.627854" elapsed="0.000280"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-01-31T16:41:59.774434" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-475.png"&gt;&lt;img src="selenium-screenshot-475.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-01-31T16:41:59.774617" level="FAIL">Element with locator '//form[@action='/signup']//input[@name='address1']' not found.</msg>
+<arg>${LOCATOR}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="FAIL" start="2025-01-31T16:41:59.628430" elapsed="0.147762">Element with locator '//form[@action='/signup']//input[@name='address1']' not found.</status>
+</kw>
+<msg time="2025-01-31T16:41:59.776408" level="INFO">${ELEMENT_EXISTS} = False</msg>
+<var>${ELEMENT_EXISTS}</var>
+<arg>Element Should Be Visible</arg>
+<arg>${LOCATOR}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2025-01-31T16:41:59.628253" elapsed="0.148207"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>${ELEMENT_EXISTS}</arg>
+<arg>Input Text</arg>
+<arg>${LOCATOR}</arg>
+<arg>${VALUE}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2025-01-31T16:41:59.776660" elapsed="0.000203"/>
+</kw>
+<arg>${name}</arg>
+<arg>${value}</arg>
+<arg>${FORM}</arg>
+<status status="PASS" start="2025-01-31T16:41:59.627484" elapsed="0.149475"/>
+</kw>
+<arg>Fill Input If Exists</arg>
+<arg>${name}</arg>
+<arg>${value}</arg>
+<arg>${FORM}</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2025-01-31T16:41:59.627288" elapsed="0.149750"/>
+</kw>
+<var name="${name}">address1</var>
+<var name="${value}">12, rue du Jonc</var>
+<status status="PASS" start="2025-01-31T16:41:59.627177" elapsed="0.149921"/>
+</iter>
+<iter>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Fill Input If Exists" owner="keywords">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-01-31T16:41:59.778347" level="INFO">${LOCATOR} = //form[@action='/signup']//input[@name='state']</msg>
+<var>${LOCATOR}</var>
+<arg>//form[@action='${FORM}']//input[@name='${NAME}']</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-01-31T16:41:59.778094" elapsed="0.000297"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-01-31T16:41:59.923575" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-476.png"&gt;&lt;img src="selenium-screenshot-476.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-01-31T16:41:59.923756" level="FAIL">Element with locator '//form[@action='/signup']//input[@name='state']' not found.</msg>
+<arg>${LOCATOR}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="FAIL" start="2025-01-31T16:41:59.778752" elapsed="0.146355">Element with locator '//form[@action='/signup']//input[@name='state']' not found.</status>
+</kw>
+<msg time="2025-01-31T16:41:59.925262" level="INFO">${ELEMENT_EXISTS} = False</msg>
+<var>${ELEMENT_EXISTS}</var>
+<arg>Element Should Be Visible</arg>
+<arg>${LOCATOR}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2025-01-31T16:41:59.778547" elapsed="0.146764"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>${ELEMENT_EXISTS}</arg>
+<arg>Input Text</arg>
+<arg>${LOCATOR}</arg>
+<arg>${VALUE}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2025-01-31T16:41:59.925512" elapsed="0.000216"/>
+</kw>
+<arg>${name}</arg>
+<arg>${value}</arg>
+<arg>${FORM}</arg>
+<status status="PASS" start="2025-01-31T16:41:59.777653" elapsed="0.148187"/>
+</kw>
+<arg>Fill Input If Exists</arg>
+<arg>${name}</arg>
+<arg>${value}</arg>
+<arg>${FORM}</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2025-01-31T16:41:59.777415" elapsed="0.148537"/>
+</kw>
+<var name="${name}">state</var>
+<var name="${value}">France</var>
+<status status="PASS" start="2025-01-31T16:41:59.777288" elapsed="0.148755"/>
+</iter>
+<iter>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Fill Input If Exists" owner="keywords">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-01-31T16:41:59.927286" level="INFO">${LOCATOR} = //form[@action='/signup']//input[@name='city']</msg>
+<var>${LOCATOR}</var>
+<arg>//form[@action='${FORM}']//input[@name='${NAME}']</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-01-31T16:41:59.927013" elapsed="0.000314"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-01-31T16:42:00.060062" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-477.png"&gt;&lt;img src="selenium-screenshot-477.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-01-31T16:42:00.060280" level="FAIL">Element with locator '//form[@action='/signup']//input[@name='city']' not found.</msg>
+<arg>${LOCATOR}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="FAIL" start="2025-01-31T16:41:59.927640" elapsed="0.134107">Element with locator '//form[@action='/signup']//input[@name='city']' not found.</status>
+</kw>
+<msg time="2025-01-31T16:42:00.061974" level="INFO">${ELEMENT_EXISTS} = False</msg>
+<var>${ELEMENT_EXISTS}</var>
+<arg>Element Should Be Visible</arg>
+<arg>${LOCATOR}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2025-01-31T16:41:59.927466" elapsed="0.134554"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>${ELEMENT_EXISTS}</arg>
+<arg>Input Text</arg>
+<arg>${LOCATOR}</arg>
+<arg>${VALUE}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2025-01-31T16:42:00.062253" elapsed="0.000205"/>
+</kw>
+<arg>${name}</arg>
+<arg>${value}</arg>
+<arg>${FORM}</arg>
+<status status="PASS" start="2025-01-31T16:41:59.926586" elapsed="0.135994"/>
+</kw>
+<arg>Fill Input If Exists</arg>
+<arg>${name}</arg>
+<arg>${value}</arg>
+<arg>${FORM}</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2025-01-31T16:41:59.926348" elapsed="0.136317"/>
+</kw>
+<var name="${name}">city</var>
+<var name="${value}">Wattrelos</var>
+<status status="PASS" start="2025-01-31T16:41:59.926202" elapsed="0.136547"/>
+</iter>
+<iter>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Fill Input If Exists" owner="keywords">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-01-31T16:42:00.063994" level="INFO">${LOCATOR} = //form[@action='/signup']//input[@name='zipcode']</msg>
+<var>${LOCATOR}</var>
+<arg>//form[@action='${FORM}']//input[@name='${NAME}']</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-01-31T16:42:00.063718" elapsed="0.000333"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-01-31T16:42:00.201785" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-478.png"&gt;&lt;img src="selenium-screenshot-478.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-01-31T16:42:00.201977" level="FAIL">Element with locator '//form[@action='/signup']//input[@name='zipcode']' not found.</msg>
+<arg>${LOCATOR}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="FAIL" start="2025-01-31T16:42:00.064438" elapsed="0.139078">Element with locator '//form[@action='/signup']//input[@name='zipcode']' not found.</status>
+</kw>
+<msg time="2025-01-31T16:42:00.203754" level="INFO">${ELEMENT_EXISTS} = False</msg>
+<var>${ELEMENT_EXISTS}</var>
+<arg>Element Should Be Visible</arg>
+<arg>${LOCATOR}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2025-01-31T16:42:00.064230" elapsed="0.139578"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>${ELEMENT_EXISTS}</arg>
+<arg>Input Text</arg>
+<arg>${LOCATOR}</arg>
+<arg>${VALUE}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2025-01-31T16:42:00.204030" elapsed="0.000221"/>
+</kw>
+<arg>${name}</arg>
+<arg>${value}</arg>
+<arg>${FORM}</arg>
+<status status="PASS" start="2025-01-31T16:42:00.063317" elapsed="0.141048"/>
+</kw>
+<arg>Fill Input If Exists</arg>
+<arg>${name}</arg>
+<arg>${value}</arg>
+<arg>${FORM}</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2025-01-31T16:42:00.063075" elapsed="0.141369"/>
+</kw>
+<var name="${name}">zipcode</var>
+<var name="${value}">59150</var>
+<status status="PASS" start="2025-01-31T16:42:00.062941" elapsed="0.141554"/>
+</iter>
+<iter>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Fill Input If Exists" owner="keywords">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-01-31T16:42:00.205889" level="INFO">${LOCATOR} = //form[@action='/signup']//input[@name='mobile_number']</msg>
+<var>${LOCATOR}</var>
+<arg>//form[@action='${FORM}']//input[@name='${NAME}']</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-01-31T16:42:00.205586" elapsed="0.000377"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-01-31T16:42:00.341397" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-479.png"&gt;&lt;img src="selenium-screenshot-479.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-01-31T16:42:00.341573" level="FAIL">Element with locator '//form[@action='/signup']//input[@name='mobile_number']' not found.</msg>
+<arg>${LOCATOR}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="FAIL" start="2025-01-31T16:42:00.206296" elapsed="0.136728">Element with locator '//form[@action='/signup']//input[@name='mobile_number']' not found.</status>
+</kw>
+<msg time="2025-01-31T16:42:00.343241" level="INFO">${ELEMENT_EXISTS} = False</msg>
+<var>${ELEMENT_EXISTS}</var>
+<arg>Element Should Be Visible</arg>
+<arg>${LOCATOR}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2025-01-31T16:42:00.206109" elapsed="0.137190"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>${ELEMENT_EXISTS}</arg>
+<arg>Input Text</arg>
+<arg>${LOCATOR}</arg>
+<arg>${VALUE}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2025-01-31T16:42:00.343513" elapsed="0.000197"/>
+</kw>
+<arg>${name}</arg>
+<arg>${value}</arg>
+<arg>${FORM}</arg>
+<status status="PASS" start="2025-01-31T16:42:00.205098" elapsed="0.138690"/>
+</kw>
+<arg>Fill Input If Exists</arg>
+<arg>${name}</arg>
+<arg>${value}</arg>
+<arg>${FORM}</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2025-01-31T16:42:00.204838" elapsed="0.139049"/>
+</kw>
+<var name="${name}">mobile_number</var>
+<var name="${value}">0654852312</var>
+<status status="PASS" start="2025-01-31T16:42:00.204685" elapsed="0.139270"/>
+</iter>
+<iter>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Fill Input If Exists" owner="keywords">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-01-31T16:42:00.345209" level="INFO">${LOCATOR} = //form[@action='/signup']//input[@name='password']</msg>
+<var>${LOCATOR}</var>
+<arg>//form[@action='${FORM}']//input[@name='${NAME}']</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-01-31T16:42:00.344928" elapsed="0.000322"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-01-31T16:42:00.490903" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-480.png"&gt;&lt;img src="selenium-screenshot-480.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-01-31T16:42:00.491097" level="FAIL">Element with locator '//form[@action='/signup']//input[@name='password']' not found.</msg>
+<arg>${LOCATOR}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="FAIL" start="2025-01-31T16:42:00.345602" elapsed="0.147290">Element with locator '//form[@action='/signup']//input[@name='password']' not found.</status>
+</kw>
+<msg time="2025-01-31T16:42:00.493126" level="INFO">${ELEMENT_EXISTS} = False</msg>
+<var>${ELEMENT_EXISTS}</var>
+<arg>Element Should Be Visible</arg>
+<arg>${LOCATOR}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2025-01-31T16:42:00.345417" elapsed="0.147770"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>${ELEMENT_EXISTS}</arg>
+<arg>Input Text</arg>
+<arg>${LOCATOR}</arg>
+<arg>${VALUE}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2025-01-31T16:42:00.493487" elapsed="0.000229"/>
+</kw>
+<arg>${name}</arg>
+<arg>${value}</arg>
+<arg>${FORM}</arg>
+<status status="PASS" start="2025-01-31T16:42:00.344529" elapsed="0.149372"/>
+</kw>
+<arg>Fill Input If Exists</arg>
+<arg>${name}</arg>
+<arg>${value}</arg>
+<arg>${FORM}</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2025-01-31T16:42:00.344268" elapsed="0.149729"/>
+</kw>
+<var name="${name}">password</var>
+<var name="${value}">B1scott4</var>
+<status status="PASS" start="2025-01-31T16:42:00.344139" elapsed="0.149940"/>
+</iter>
+<var>${name}</var>
+<var>${value}</var>
+<value>&amp;{FIELD_VALUES}</value>
+<status status="PASS" start="2025-01-31T16:41:59.090419" elapsed="1.403771"/>
+</for>
+<arg>${FORM_SIG}</arg>
+<arg>&amp;{FORM_FIELDS}</arg>
+<status status="PASS" start="2025-01-31T16:41:59.089944" elapsed="1.404408"/>
+</kw>
+<kw name="And Submit the form" owner="keywords">
+<kw name="Scroll Until Element Is Visible" owner="keywords">
+<kw name="Get WebElement" owner="SeleniumLibrary">
+<msg time="2025-01-31T16:42:00.506252" level="INFO">${ELT} = &lt;selenium.webdriver.remote.webelement.WebElement (session="00d8a0fbaa17f47291fe88bc7a1fc600", element="f.12B0CCEFB379FBBC5C1A1198CB96A9A9.d.E88CA0E70BE09D691DB7E60FEA49F183.e.382")&gt;</msg>
+<var>${ELT}</var>
+<arg>${XPATH}</arg>
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<status status="PASS" start="2025-01-31T16:42:00.495716" elapsed="0.010581"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${ELT}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2025-01-31T16:42:00.506485" elapsed="0.264601"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2025-01-31T16:42:00.772136" level="INFO">Executing JavaScript:
+window.scrollBy(0, 150);
+Without any arguments.</msg>
+<arg>window.scrollBy(0, 150);</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2025-01-31T16:42:00.771421" elapsed="0.010849"/>
+</kw>
+<arg>${SUBMIT_XPATH}</arg>
+<status status="PASS" start="2025-01-31T16:42:00.495292" elapsed="0.287156"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-01-31T16:42:00.783145" level="INFO">Clicking button '//button[@type='submit'][.='Signup']'.</msg>
+<arg>${SUBMIT_XPATH}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-31T16:42:00.782773" elapsed="2.465403"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-01-31T16:42:07.249226" level="INFO">Slept 4 seconds.</msg>
+<arg>4s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-01-31T16:42:03.248426" elapsed="4.000954"/>
+</kw>
+<arg>${SIGNUP_XPATH}</arg>
+<status status="PASS" start="2025-01-31T16:42:00.494805" elapsed="6.754728"/>
+</kw>
+<kw name="Then The user is redirect to the signup page" owner="keywords">
+<kw name="Get Location" owner="SeleniumLibrary">
+<msg time="2025-01-31T16:42:07.255150" level="INFO">${URL_Locale} = https://automationexercise.com/signup</msg>
+<var>${URL_Locale}</var>
+<doc>Returns the current browser window URL.</doc>
+<status status="PASS" start="2025-01-31T16:42:07.250355" elapsed="0.004844"/>
+</kw>
+<kw name="Comparer URL" owner="keywords">
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${URL1}</arg>
+<arg>${URL2}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2025-01-31T16:42:07.255774" elapsed="0.000195"/>
+</kw>
+<arg>${URL_locale}</arg>
+<arg>${URL2}/signup</arg>
+<status status="PASS" start="2025-01-31T16:42:07.255383" elapsed="0.000675"/>
+</kw>
+<status status="PASS" start="2025-01-31T16:42:07.249956" elapsed="0.006159"/>
+</kw>
+<kw name="When User fill the register inputs" owner="keywords">
+<for flavor="IN">
+<iter>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Fill Input If Exists" owner="keywords">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-01-31T16:42:07.258080" level="INFO">${LOCATOR} = //form[@action='/signup']//input[@name='name']</msg>
+<var>${LOCATOR}</var>
+<arg>//form[@action='${FORM}']//input[@name='${NAME}']</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-01-31T16:42:07.257827" elapsed="0.000295"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-01-31T16:42:07.275540" level="INFO">Element '//form[@action='/signup']//input[@name='name']' is displayed.</msg>
+<arg>${LOCATOR}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-01-31T16:42:07.258474" elapsed="0.017191"/>
+</kw>
+<msg time="2025-01-31T16:42:07.275886" level="INFO">${ELEMENT_EXISTS} = True</msg>
+<var>${ELEMENT_EXISTS}</var>
+<arg>Element Should Be Visible</arg>
+<arg>${LOCATOR}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2025-01-31T16:42:07.258268" elapsed="0.017660"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-01-31T16:42:07.276631" level="INFO">Typing text 'Biscotte' into text field '//form[@action='/signup']//input[@name='name']'.</msg>
+<arg>${LOCATOR}</arg>
+<arg>${VALUE}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-31T16:42:07.276385" elapsed="0.091442"/>
+</kw>
+<arg>${ELEMENT_EXISTS}</arg>
+<arg>Input Text</arg>
+<arg>${LOCATOR}</arg>
+<arg>${VALUE}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2025-01-31T16:42:07.276127" elapsed="0.091803"/>
+</kw>
+<arg>${name}</arg>
+<arg>${value}</arg>
+<arg>${FORM}</arg>
+<status status="PASS" start="2025-01-31T16:42:07.257466" elapsed="0.110568"/>
+</kw>
+<arg>Fill Input If Exists</arg>
+<arg>${name}</arg>
+<arg>${value}</arg>
+<arg>${FORM}</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2025-01-31T16:42:07.257207" elapsed="0.110913"/>
+</kw>
+<var name="${name}">name</var>
+<var name="${value}">Biscotte</var>
+<status status="PASS" start="2025-01-31T16:42:07.257059" elapsed="0.111147"/>
+</iter>
+<iter>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Fill Input If Exists" owner="keywords">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-01-31T16:42:07.369629" level="INFO">${LOCATOR} = //form[@action='/signup']//input[@name='email']</msg>
+<var>${LOCATOR}</var>
+<arg>//form[@action='${FORM}']//input[@name='${NAME}']</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-01-31T16:42:07.369343" elapsed="0.000349"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-01-31T16:42:07.385133" level="INFO">Element '//form[@action='/signup']//input[@name='email']' is displayed.</msg>
+<arg>${LOCATOR}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-01-31T16:42:07.370163" elapsed="0.015238"/>
+</kw>
+<msg time="2025-01-31T16:42:07.385741" level="INFO">${ELEMENT_EXISTS} = True</msg>
+<var>${ELEMENT_EXISTS}</var>
+<arg>Element Should Be Visible</arg>
+<arg>${LOCATOR}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2025-01-31T16:42:07.369921" elapsed="0.015911"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-01-31T16:42:07.387493" level="INFO">Typing text 'zebiscotte@lolmail.com' into text field '//form[@action='/signup']//input[@name='email']'.</msg>
+<msg time="2025-01-31T16:42:07.573795" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-481.png"&gt;&lt;img src="selenium-screenshot-481.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-01-31T16:42:07.573998" level="FAIL">InvalidElementStateException: Message: invalid element state: Element is not currently interactable and may not be manipulated
+  (Session info: chrome=132.0.6834.160)
+Stacktrace:
+	GetHandleVerifier [0x00007FF70F4E02F5+28725]
+	(No symbol) [0x00007FF70F442AE0]
+	(No symbol) [0x00007FF70F2D510A]
+	(No symbol) [0x00007FF70F2DBD70]
+	(No symbol) [0x00007FF70F2DEABC]
+	(No symbol) [0x00007FF70F2DEB8F]
+	(No symbol) [0x00007FF70F31F4C3]
+	(No symbol) [0x00007FF70F34FFAA]
+	(No symbol) [0x00007FF70F31BF86]
+	(No symbol) [0x00007FF70F3501C0]
+	(No symbol) [0x00007FF70F370181]
+	(No symbol) [0x00007FF70F34FD53]
+	(No symbol) [0x00007FF70F31A0E3]
+	(No symbol) [0x00007FF70F31B471]
+	GetHandleVerifier [0x00007FF70F80F30D+3366989]
+	GetHandleVerifier [0x00007FF70F8212F0+3440688]
+	GetHandleVerifier [0x00007FF70F8178FD+3401277]
+	GetHandleVerifier [0x00007FF70F5AAAAB+858091]
+	(No symbol) [0x00007FF70F44E74F]
+	(No symbol) [0x00007FF70F44A304]
+	(No symbol) [0x00007FF70F44A49D]
+	(No symbol) [0x00007FF70F438B69]
+	BaseThreadInitThunk [0x00007FF92F80259D+29]
+	RtlUserThreadStart [0x00007FF93112AF38+40]
+</msg>
+<arg>${LOCATOR}</arg>
+<arg>${VALUE}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="FAIL" start="2025-01-31T16:42:07.386965" elapsed="0.189848">InvalidElementStateException: Message: invalid element state: Element is not currently interactable and may not be manipulated
+  (Session info: chrome=132.0.6834.160)
+Stacktrace:
+	GetHandleVerifier [0x00007FF70F4E02F5+28725]
+	(No symbol) [0x00007FF70F442AE0]
+	(No symbol) [0x00007FF70F2D510A]
+	(No symbol) [0x00007FF70F2DBD70]
+	(No symbol) [0x00007FF70F2DEABC]
+	(No symbol) [0x00007FF70F2DEB8F]
+	(No symbol) [0x00007FF70F31F4C3]
+	(No symbol) [0x00007FF70F34FFAA]
+	(No symbol) [0x00007FF70F31BF86]
+	(No symbol) [0x00007FF70F3501C0]
+	(No symbol) [0x00007FF70F370181]
+	(No symbol) [0x00007FF70F34FD53]
+	(No symbol) [0x00007FF70F31A0E3]
+	(No symbol) [0x00007FF70F31B471]
+	GetHandleVerifier [0x00007FF70F80F30D+3366989]
+	GetHandleVerifier [0x00007FF70F8212F0+3440688]
+	GetHandleVerifier [0x00007FF70F8178FD+3401277]
+	GetHandleVerifier [0x00007FF70F5AAAAB+858091]
+	(No symbol) [0x00007FF70F44E74F]
+	(No symbol) [0x00007FF70F44A304]
+	(No symbol) [0x00007FF70F44A49D]
+	(No symbol) [0x00007FF70F438B69]
+	BaseThreadInitThunk [0x00007FF92F80259D+29]
+	RtlUserThreadStart [0x00007FF93112AF38+40]
+</status>
+</kw>
+<arg>${ELEMENT_EXISTS}</arg>
+<arg>Input Text</arg>
+<arg>${LOCATOR}</arg>
+<arg>${VALUE}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="FAIL" start="2025-01-31T16:42:07.386292" elapsed="0.190641">InvalidElementStateException: Message: invalid element state: Element is not currently interactable and may not be manipulated
+  (Session info: chrome=132.0.6834.160)
+Stacktrace:
+	GetHandleVerifier [0x00007FF70F4E02F5+28725]
+	(No symbol) [0x00007FF70F442AE0]
+	(No symbol) [0x00007FF70F2D510A]
+	(No symbol) [0x00007FF70F2DBD70]
+	(No symbol) [0x00007FF70F2DEABC]
+	(No symbol) [0x00007FF70F2DEB8F]
+	(No symbol) [0x00007FF70F31F4C3]
+	(No symbol) [0x00007FF70F34FFAA]
+	(No symbol) [0x00007FF70F31BF86]
+	(No symbol) [0x00007FF70F3501C0]
+	(No symbol) [0x00007FF70F370181]
+	(No symbol) [0x00007FF70F34FD53]
+	(No symbol) [0x00007FF70F31A0E3]
+	(No symbol) [0x00007FF70F31B471]
+	GetHandleVerifier [0x00007FF70F80F30D+3366989]
+	GetHandleVerifier [0x00007FF70F8212F0+3440688]
+	GetHandleVerifier [0x00007FF70F8178FD+3401277]
+	GetHandleVerifier [0x00007FF70F5AAAAB+858091]
+	(No symbol) [0x00007FF70F44E74F]
+	(No symbol) [0x00007FF70F44A304]
+	(No symbol) [0x00007FF70F44A49D]
+	(No symbol) [0x00007FF70F438B69]
+	BaseThreadInitThunk [0x00007FF92F80259D+29]
+	RtlUserThreadStart [0x00007FF93112AF38+40]
+</status>
+</kw>
+<arg>${name}</arg>
+<arg>${value}</arg>
+<arg>${FORM}</arg>
+<status status="FAIL" start="2025-01-31T16:42:07.368885" elapsed="0.208275">InvalidElementStateException: Message: invalid element state: Element is not currently interactable and may not be manipulated
+  (Session info: chrome=132.0.6834.160)
+Stacktrace:
+	GetHandleVerifier [0x00007FF70F4E02F5+28725]
+	(No symbol) [0x00007FF70F442AE0]
+	(No symbol) [0x00007FF70F2D510A]
+	(No symbol) [0x00007FF70F2DBD70]
+	(No symbol) [0x00007FF70F2DEABC]
+	(No symbol) [0x00007FF70F2DEB8F]
+	(No symbol) [0x00007FF70F31F4C3]
+	(No symbol) [0x00007FF70F34FFAA]
+	(No symbol) [0x00007FF70F31BF86]
+	(No symbol) [0x00007FF70F3501C0]
+	(No symbol) [0x00007FF70F370181]
+	(No symbol) [0x00007FF70F34FD53]
+	(No symbol) [0x00007FF70F31A0E3]
+	(No symbol) [0x00007FF70F31B471]
+	GetHandleVerifier [0x00007FF70F80F30D+3366989]
+	GetHandleVerifier [0x00007FF70F8212F0+3440688]
+	GetHandleVerifier [0x00007FF70F8178FD+3401277]
+	GetHandleVerifier [0x00007FF70F5AAAAB+858091]
+	(No symbol) [0x00007FF70F44E74F]
+	(No symbol) [0x00007FF70F44A304]
+	(No symbol) [0x00007FF70F44A49D]
+	(No symbol) [0x00007FF70F438B69]
+	BaseThreadInitThunk [0x00007FF92F80259D+29]
+	RtlUserThreadStart [0x00007FF93112AF38+40]
+</status>
+</kw>
+<arg>Fill Input If Exists</arg>
+<arg>${name}</arg>
+<arg>${value}</arg>
+<arg>${FORM}</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2025-01-31T16:42:07.368567" elapsed="0.208731"/>
+</kw>
+<var name="${name}">email</var>
+<var name="${value}">zebiscotte@lolmail.com</var>
+<status status="PASS" start="2025-01-31T16:42:07.368380" elapsed="0.208989"/>
+</iter>
+<iter>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Fill Input If Exists" owner="keywords">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-01-31T16:42:07.582700" level="INFO">${LOCATOR} = //form[@action='/signup']//input[@name='last_name']</msg>
+<var>${LOCATOR}</var>
+<arg>//form[@action='${FORM}']//input[@name='${NAME}']</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-01-31T16:42:07.578348" elapsed="0.004419"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-01-31T16:42:07.601151" level="INFO">Element '//form[@action='/signup']//input[@name='last_name']' is displayed.</msg>
+<arg>${LOCATOR}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-01-31T16:42:07.583161" elapsed="0.018136"/>
+</kw>
+<msg time="2025-01-31T16:42:07.601444" level="INFO">${ELEMENT_EXISTS} = True</msg>
+<var>${ELEMENT_EXISTS}</var>
+<arg>Element Should Be Visible</arg>
+<arg>${LOCATOR}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2025-01-31T16:42:07.582944" elapsed="0.018530"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-01-31T16:42:07.602217" level="INFO">Typing text 'Biscotte' into text field '//form[@action='/signup']//input[@name='last_name']'.</msg>
+<arg>${LOCATOR}</arg>
+<arg>${VALUE}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-31T16:42:07.601937" elapsed="0.099812"/>
+</kw>
+<arg>${ELEMENT_EXISTS}</arg>
+<arg>Input Text</arg>
+<arg>${LOCATOR}</arg>
+<arg>${VALUE}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2025-01-31T16:42:07.601661" elapsed="0.100186"/>
+</kw>
+<arg>${name}</arg>
+<arg>${value}</arg>
+<arg>${FORM}</arg>
+<status status="PASS" start="2025-01-31T16:42:07.577985" elapsed="0.123959"/>
+</kw>
+<arg>Fill Input If Exists</arg>
+<arg>${name}</arg>
+<arg>${value}</arg>
+<arg>${FORM}</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2025-01-31T16:42:07.577723" elapsed="0.124302"/>
+</kw>
+<var name="${name}">last_name</var>
+<var name="${value}">Biscotte</var>
+<status status="PASS" start="2025-01-31T16:42:07.577584" elapsed="0.124523"/>
+</iter>
+<iter>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Fill Input If Exists" owner="keywords">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-01-31T16:42:07.703439" level="INFO">${LOCATOR} = //form[@action='/signup']//input[@name='first_name']</msg>
+<var>${LOCATOR}</var>
+<arg>//form[@action='${FORM}']//input[@name='${NAME}']</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-01-31T16:42:07.703113" elapsed="0.000373"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-01-31T16:42:07.722872" level="INFO">Element '//form[@action='/signup']//input[@name='first_name']' is displayed.</msg>
+<arg>${LOCATOR}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-01-31T16:42:07.703844" elapsed="0.019164"/>
+</kw>
+<msg time="2025-01-31T16:42:07.723165" level="INFO">${ELEMENT_EXISTS} = True</msg>
+<var>${ELEMENT_EXISTS}</var>
+<arg>Element Should Be Visible</arg>
+<arg>${LOCATOR}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2025-01-31T16:42:07.703656" elapsed="0.019541"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-01-31T16:42:07.723689" level="INFO">Typing text 'Johnny' into text field '//form[@action='/signup']//input[@name='first_name']'.</msg>
+<arg>${LOCATOR}</arg>
+<arg>${VALUE}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-31T16:42:07.723528" elapsed="0.099786"/>
+</kw>
+<arg>${ELEMENT_EXISTS}</arg>
+<arg>Input Text</arg>
+<arg>${LOCATOR}</arg>
+<arg>${VALUE}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2025-01-31T16:42:07.723346" elapsed="0.100101"/>
+</kw>
+<arg>${name}</arg>
+<arg>${value}</arg>
+<arg>${FORM}</arg>
+<status status="PASS" start="2025-01-31T16:42:07.702696" elapsed="0.120838"/>
+</kw>
+<arg>Fill Input If Exists</arg>
+<arg>${name}</arg>
+<arg>${value}</arg>
+<arg>${FORM}</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2025-01-31T16:42:07.702461" elapsed="0.121143"/>
+</kw>
+<var name="${name}">first_name</var>
+<var name="${value}">Johnny</var>
+<status status="PASS" start="2025-01-31T16:42:07.702293" elapsed="0.121365"/>
+</iter>
+<iter>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Fill Input If Exists" owner="keywords">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-01-31T16:42:07.824937" level="INFO">${LOCATOR} = //form[@action='/signup']//input[@name='address1']</msg>
+<var>${LOCATOR}</var>
+<arg>//form[@action='${FORM}']//input[@name='${NAME}']</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-01-31T16:42:07.824705" elapsed="0.000275"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-01-31T16:42:07.841531" level="INFO">Element '//form[@action='/signup']//input[@name='address1']' is displayed.</msg>
+<arg>${LOCATOR}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-01-31T16:42:07.825333" elapsed="0.016323"/>
+</kw>
+<msg time="2025-01-31T16:42:07.841822" level="INFO">${ELEMENT_EXISTS} = True</msg>
+<var>${ELEMENT_EXISTS}</var>
+<arg>Element Should Be Visible</arg>
+<arg>${LOCATOR}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2025-01-31T16:42:07.825145" elapsed="0.016718"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-01-31T16:42:07.842610" level="INFO">Typing text '12, rue du Jonc' into text field '//form[@action='/signup']//input[@name='address1']'.</msg>
+<arg>${LOCATOR}</arg>
+<arg>${VALUE}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-31T16:42:07.842353" elapsed="0.136601"/>
+</kw>
+<arg>${ELEMENT_EXISTS}</arg>
+<arg>Input Text</arg>
+<arg>${LOCATOR}</arg>
+<arg>${VALUE}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2025-01-31T16:42:07.842073" elapsed="0.136964"/>
+</kw>
+<arg>${name}</arg>
+<arg>${value}</arg>
+<arg>${FORM}</arg>
+<status status="PASS" start="2025-01-31T16:42:07.824271" elapsed="0.154823"/>
+</kw>
+<arg>Fill Input If Exists</arg>
+<arg>${name}</arg>
+<arg>${value}</arg>
+<arg>${FORM}</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2025-01-31T16:42:07.824024" elapsed="0.155112"/>
+</kw>
+<var name="${name}">address1</var>
+<var name="${value}">12, rue du Jonc</var>
+<status status="PASS" start="2025-01-31T16:42:07.823839" elapsed="0.155429"/>
+</iter>
+<iter>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Fill Input If Exists" owner="keywords">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-01-31T16:42:07.980345" level="INFO">${LOCATOR} = //form[@action='/signup']//input[@name='state']</msg>
+<var>${LOCATOR}</var>
+<arg>//form[@action='${FORM}']//input[@name='${NAME}']</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-01-31T16:42:07.980142" elapsed="0.000237"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-01-31T16:42:07.998711" level="INFO">Element '//form[@action='/signup']//input[@name='state']' is displayed.</msg>
+<arg>${LOCATOR}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-01-31T16:42:07.980672" elapsed="0.018173"/>
+</kw>
+<msg time="2025-01-31T16:42:07.999024" level="INFO">${ELEMENT_EXISTS} = True</msg>
+<var>${ELEMENT_EXISTS}</var>
+<arg>Element Should Be Visible</arg>
+<arg>${LOCATOR}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2025-01-31T16:42:07.980508" elapsed="0.018547"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-01-31T16:42:07.999768" level="INFO">Typing text 'France' into text field '//form[@action='/signup']//input[@name='state']'.</msg>
+<arg>${LOCATOR}</arg>
+<arg>${VALUE}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-31T16:42:07.999507" elapsed="0.099014"/>
+</kw>
+<arg>${ELEMENT_EXISTS}</arg>
+<arg>Input Text</arg>
+<arg>${LOCATOR}</arg>
+<arg>${VALUE}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2025-01-31T16:42:07.999245" elapsed="0.099410"/>
+</kw>
+<arg>${name}</arg>
+<arg>${value}</arg>
+<arg>${FORM}</arg>
+<status status="PASS" start="2025-01-31T16:42:07.979803" elapsed="0.118966"/>
+</kw>
+<arg>Fill Input If Exists</arg>
+<arg>${name}</arg>
+<arg>${value}</arg>
+<arg>${FORM}</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2025-01-31T16:42:07.979592" elapsed="0.119273"/>
+</kw>
+<var name="${name}">state</var>
+<var name="${value}">France</var>
+<status status="PASS" start="2025-01-31T16:42:07.979437" elapsed="0.119482"/>
+</iter>
+<iter>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Fill Input If Exists" owner="keywords">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-01-31T16:42:08.100140" level="INFO">${LOCATOR} = //form[@action='/signup']//input[@name='city']</msg>
+<var>${LOCATOR}</var>
+<arg>//form[@action='${FORM}']//input[@name='${NAME}']</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-01-31T16:42:08.099894" elapsed="0.000279"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-01-31T16:42:08.116312" level="INFO">Element '//form[@action='/signup']//input[@name='city']' is displayed.</msg>
+<arg>${LOCATOR}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-01-31T16:42:08.100477" elapsed="0.015985"/>
+</kw>
+<msg time="2025-01-31T16:42:08.116639" level="INFO">${ELEMENT_EXISTS} = True</msg>
+<var>${ELEMENT_EXISTS}</var>
+<arg>Element Should Be Visible</arg>
+<arg>${LOCATOR}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2025-01-31T16:42:08.100315" elapsed="0.016381"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-01-31T16:42:08.117515" level="INFO">Typing text 'Wattrelos' into text field '//form[@action='/signup']//input[@name='city']'.</msg>
+<arg>${LOCATOR}</arg>
+<arg>${VALUE}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-31T16:42:08.117215" elapsed="0.111556"/>
+</kw>
+<arg>${ELEMENT_EXISTS}</arg>
+<arg>Input Text</arg>
+<arg>${LOCATOR}</arg>
+<arg>${VALUE}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2025-01-31T16:42:08.116913" elapsed="0.111982"/>
+</kw>
+<arg>${name}</arg>
+<arg>${value}</arg>
+<arg>${FORM}</arg>
+<status status="PASS" start="2025-01-31T16:42:08.099485" elapsed="0.129506"/>
+</kw>
+<arg>Fill Input If Exists</arg>
+<arg>${name}</arg>
+<arg>${value}</arg>
+<arg>${FORM}</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2025-01-31T16:42:08.099250" elapsed="0.129828"/>
+</kw>
+<var name="${name}">city</var>
+<var name="${value}">Wattrelos</var>
+<status status="PASS" start="2025-01-31T16:42:08.099092" elapsed="0.130051"/>
+</iter>
+<iter>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Fill Input If Exists" owner="keywords">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-01-31T16:42:08.230426" level="INFO">${LOCATOR} = //form[@action='/signup']//input[@name='zipcode']</msg>
+<var>${LOCATOR}</var>
+<arg>//form[@action='${FORM}']//input[@name='${NAME}']</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-01-31T16:42:08.230182" elapsed="0.000275"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-01-31T16:42:08.247415" level="INFO">Element '//form[@action='/signup']//input[@name='zipcode']' is displayed.</msg>
+<arg>${LOCATOR}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-01-31T16:42:08.230766" elapsed="0.016786"/>
+</kw>
+<msg time="2025-01-31T16:42:08.247737" level="INFO">${ELEMENT_EXISTS} = True</msg>
+<var>${ELEMENT_EXISTS}</var>
+<arg>Element Should Be Visible</arg>
+<arg>${LOCATOR}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2025-01-31T16:42:08.230608" elapsed="0.017156"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-01-31T16:42:08.248563" level="INFO">Typing text '59150' into text field '//form[@action='/signup']//input[@name='zipcode']'.</msg>
+<arg>${LOCATOR}</arg>
+<arg>${VALUE}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-31T16:42:08.248283" elapsed="0.098741"/>
+</kw>
+<arg>${ELEMENT_EXISTS}</arg>
+<arg>Input Text</arg>
+<arg>${LOCATOR}</arg>
+<arg>${VALUE}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2025-01-31T16:42:08.247990" elapsed="0.099172"/>
+</kw>
+<arg>${name}</arg>
+<arg>${value}</arg>
+<arg>${FORM}</arg>
+<status status="PASS" start="2025-01-31T16:42:08.229804" elapsed="0.117459"/>
+</kw>
+<arg>Fill Input If Exists</arg>
+<arg>${name}</arg>
+<arg>${value}</arg>
+<arg>${FORM}</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2025-01-31T16:42:08.229510" elapsed="0.117833"/>
+</kw>
+<var name="${name}">zipcode</var>
+<var name="${value}">59150</var>
+<status status="PASS" start="2025-01-31T16:42:08.229348" elapsed="0.118061"/>
+</iter>
+<iter>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Fill Input If Exists" owner="keywords">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-01-31T16:42:08.348905" level="INFO">${LOCATOR} = //form[@action='/signup']//input[@name='mobile_number']</msg>
+<var>${LOCATOR}</var>
+<arg>//form[@action='${FORM}']//input[@name='${NAME}']</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-01-31T16:42:08.348489" elapsed="0.000462"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-01-31T16:42:08.365892" level="INFO">Element '//form[@action='/signup']//input[@name='mobile_number']' is displayed.</msg>
+<arg>${LOCATOR}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-01-31T16:42:08.349326" elapsed="0.016689"/>
+</kw>
+<msg time="2025-01-31T16:42:08.366181" level="INFO">${ELEMENT_EXISTS} = True</msg>
+<var>${ELEMENT_EXISTS}</var>
+<arg>Element Should Be Visible</arg>
+<arg>${LOCATOR}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2025-01-31T16:42:08.349135" elapsed="0.017082"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-01-31T16:42:08.366906" level="INFO">Typing text '0654852312' into text field '//form[@action='/signup']//input[@name='mobile_number']'.</msg>
+<arg>${LOCATOR}</arg>
+<arg>${VALUE}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-31T16:42:08.366668" elapsed="0.102429"/>
+</kw>
+<arg>${ELEMENT_EXISTS}</arg>
+<arg>Input Text</arg>
+<arg>${LOCATOR}</arg>
+<arg>${VALUE}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2025-01-31T16:42:08.366411" elapsed="0.102811"/>
+</kw>
+<arg>${name}</arg>
+<arg>${value}</arg>
+<arg>${FORM}</arg>
+<status status="PASS" start="2025-01-31T16:42:08.348079" elapsed="0.121245"/>
+</kw>
+<arg>Fill Input If Exists</arg>
+<arg>${name}</arg>
+<arg>${value}</arg>
+<arg>${FORM}</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2025-01-31T16:42:08.347799" elapsed="0.121600"/>
+</kw>
+<var name="${name}">mobile_number</var>
+<var name="${value}">0654852312</var>
+<status status="PASS" start="2025-01-31T16:42:08.347622" elapsed="0.121826"/>
+</iter>
+<iter>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Fill Input If Exists" owner="keywords">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-01-31T16:42:08.470732" level="INFO">${LOCATOR} = //form[@action='/signup']//input[@name='password']</msg>
+<var>${LOCATOR}</var>
+<arg>//form[@action='${FORM}']//input[@name='${NAME}']</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-01-31T16:42:08.470514" elapsed="0.000261"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-01-31T16:42:08.486751" level="INFO">Element '//form[@action='/signup']//input[@name='password']' is displayed.</msg>
+<arg>${LOCATOR}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-01-31T16:42:08.471124" elapsed="0.015793"/>
+</kw>
+<msg time="2025-01-31T16:42:08.487111" level="INFO">${ELEMENT_EXISTS} = True</msg>
+<var>${ELEMENT_EXISTS}</var>
+<arg>Element Should Be Visible</arg>
+<arg>${LOCATOR}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2025-01-31T16:42:08.470923" elapsed="0.016226"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-01-31T16:42:08.488149" level="INFO">Typing text 'B1scott4' into text field '//form[@action='/signup']//input[@name='password']'.</msg>
+<arg>${LOCATOR}</arg>
+<arg>${VALUE}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-31T16:42:08.487752" elapsed="0.102124"/>
+</kw>
+<arg>${ELEMENT_EXISTS}</arg>
+<arg>Input Text</arg>
+<arg>${LOCATOR}</arg>
+<arg>${VALUE}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2025-01-31T16:42:08.487368" elapsed="0.102743"/>
+</kw>
+<arg>${name}</arg>
+<arg>${value}</arg>
+<arg>${FORM}</arg>
+<status status="PASS" start="2025-01-31T16:42:08.470169" elapsed="0.120086"/>
+</kw>
+<arg>Fill Input If Exists</arg>
+<arg>${name}</arg>
+<arg>${value}</arg>
+<arg>${FORM}</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2025-01-31T16:42:08.469815" elapsed="0.120548"/>
+</kw>
+<var name="${name}">password</var>
+<var name="${value}">B1scott4</var>
+<status status="PASS" start="2025-01-31T16:42:08.469595" elapsed="0.120845"/>
+</iter>
+<var>${name}</var>
+<var>${value}</var>
+<value>&amp;{FIELD_VALUES}</value>
+<status status="PASS" start="2025-01-31T16:42:07.256816" elapsed="1.333717"/>
+</for>
+<arg>${FORM_SIG}</arg>
+<arg>&amp;{FORM_FIELDS}</arg>
+<status status="PASS" start="2025-01-31T16:42:07.256432" elapsed="1.334223"/>
+</kw>
+<kw name="And User fill the new password" owner="keywords">
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2025-01-31T16:42:08.591988" level="INFO">Typing password into text field '//input[@name='password']'.</msg>
+<msg time="2025-01-31T16:42:08.630812" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>//input[@name='password']</arg>
+<arg>${NWPWD}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-31T16:42:08.591723" elapsed="0.109268"/>
+</kw>
+<arg>${FORM_FIELDS}[password]</arg>
+<status status="PASS" start="2025-01-31T16:42:08.591279" elapsed="0.109867"/>
+</kw>
+<kw name="And Submit the form" owner="keywords">
+<kw name="Scroll Until Element Is Visible" owner="keywords">
+<kw name="Get WebElement" owner="SeleniumLibrary">
+<msg time="2025-01-31T16:42:08.712825" level="INFO">${ELT} = &lt;selenium.webdriver.remote.webelement.WebElement (session="00d8a0fbaa17f47291fe88bc7a1fc600", element="f.12B0CCEFB379FBBC5C1A1198CB96A9A9.d.B0035FCCC8B69DDFFB22B001A893820B.e.448")&gt;</msg>
+<var>${ELT}</var>
+<arg>${XPATH}</arg>
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<status status="PASS" start="2025-01-31T16:42:08.702343" elapsed="0.010539"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${ELT}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2025-01-31T16:42:08.713082" elapsed="0.291146"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2025-01-31T16:42:09.005673" level="INFO">Executing JavaScript:
+window.scrollBy(0, 150);
+Without any arguments.</msg>
+<arg>window.scrollBy(0, 150);</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2025-01-31T16:42:09.004680" elapsed="0.006330"/>
+</kw>
+<arg>${SUBMIT_XPATH}</arg>
+<status status="PASS" start="2025-01-31T16:42:08.701998" elapsed="0.309171"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-01-31T16:42:09.011666" level="INFO">Clicking button '//button[@type='submit'][.='Create Account']'.</msg>
+<arg>${SUBMIT_XPATH}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-31T16:42:09.011368" elapsed="1.473165"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-01-31T16:42:14.485126" level="INFO">Slept 4 seconds.</msg>
+<arg>4s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-01-31T16:42:10.484695" elapsed="4.000578"/>
+</kw>
+<arg>${REGISTER_XPATH}</arg>
+<status status="PASS" start="2025-01-31T16:42:08.701565" elapsed="5.783820"/>
+</kw>
+<kw name="Then The creation of new account is confirmed" owner="keywords">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-01-31T16:42:15.486887" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-01-31T16:42:14.486285" elapsed="1.000753"/>
+</kw>
+<kw name="The following string is visible" owner="keywords">
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-01-31T16:42:15.509215" level="INFO">${TEXTE_Recup} = ACCOUNT CREATED!</msg>
+<var>${TEXTE_Recup}</var>
+<arg>//h2[@class='title text-center']</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-31T16:42:15.487734" elapsed="0.021546"/>
+</kw>
+<kw name="Should Match Regexp" owner="BuiltIn">
+<arg>${TEXTE_Recup}</arg>
+<arg>(?i)${RUBRIQUE}</arg>
+<doc>Fails if ``string`` does not match ``pattern`` as a regular expression.</doc>
+<status status="PASS" start="2025-01-31T16:42:15.509540" elapsed="0.000404"/>
+</kw>
+<arg>${ACCOUNT_CREATED}</arg>
+<status status="PASS" start="2025-01-31T16:42:15.487284" elapsed="0.022743"/>
+</kw>
+<kw name="Get Location" owner="SeleniumLibrary">
+<msg time="2025-01-31T16:42:15.514773" level="INFO">${URL_Locale} = https://automationexercise.com/account_created</msg>
+<var>${URL_Locale}</var>
+<doc>Returns the current browser window URL.</doc>
+<status status="PASS" start="2025-01-31T16:42:15.510152" elapsed="0.004665"/>
+</kw>
+<kw name="Comparer URL" owner="keywords">
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${URL1}</arg>
+<arg>${URL2}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2025-01-31T16:42:15.515303" elapsed="0.000199"/>
+</kw>
+<arg>${URL_locale}</arg>
+<arg>${URL2}/account_created</arg>
+<status status="PASS" start="2025-01-31T16:42:15.514970" elapsed="0.000611"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-01-31T16:42:15.515870" level="INFO">Clicking element '//a[@href="/"]'.</msg>
+<arg>//a[@href="/"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-31T16:42:15.515706" elapsed="1.699234"/>
+</kw>
+<status status="PASS" start="2025-01-31T16:42:14.485925" elapsed="2.729160"/>
+</kw>
+<kw name="And User is connected" owner="keywords">
+<kw name="NavElement is colored" owner="keywords">
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2025-01-31T16:42:17.267640" level="INFO">${color} = color: brown;</msg>
+<var>${color}</var>
+<arg>${XPATH}</arg>
+<arg>style</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2025-01-31T16:42:17.215893" elapsed="0.051833"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${color}</arg>
+<arg>color: ${COULEUR}</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2025-01-31T16:42:17.267993" elapsed="0.000337"/>
+</kw>
+<arg>${LOGOUTCOLOR}</arg>
+<arg>${LOGOUT_XPATH}</arg>
+<status status="PASS" start="2025-01-31T16:42:17.215686" elapsed="0.052809"/>
+</kw>
+<status status="PASS" start="2025-01-31T16:42:17.215450" elapsed="0.053195"/>
+</kw>
+<kw name="When User add some products to his cart" owner="keywords">
+<kw name="Come to products page" owner="keywords">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-01-31T16:42:17.270191" level="INFO">Opening url 'https://automationexercise.com/products'</msg>
+<arg>${URL2}/products</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-01-31T16:42:17.269978" elapsed="1.020890"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2025-01-31T16:42:18.291664" level="INFO">Executing JavaScript:
+window.scrollBy(0, 300);
+Without any arguments.</msg>
+<arg>window.scrollBy(0, 300);</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2025-01-31T16:42:18.291132" elapsed="0.020116"/>
+</kw>
+<status status="PASS" start="2025-01-31T16:42:17.269652" elapsed="1.041724"/>
+</kw>
+<kw name="Convert To Integer" owner="BuiltIn">
+<msg time="2025-01-31T16:42:18.311805" level="INFO">${NB_PRODUCTS} = 2</msg>
+<var>${NB_PRODUCTS}</var>
+<arg>${NB_PRODUCTS}</arg>
+<doc>Converts the given item to an integer number.</doc>
+<status status="PASS" start="2025-01-31T16:42:18.311533" elapsed="0.000304"/>
+</kw>
+<for flavor="IN RANGE">
+<iter>
+<kw name="Adding a product" owner="keywords">
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-01-31T16:42:18.368487" level="INFO">Element '//a[.='Add to cart']' is displayed.</msg>
+<arg>//a[.='Add to cart']</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-01-31T16:42:18.313052" elapsed="0.055592"/>
+</kw>
+<msg time="2025-01-31T16:42:18.368833" level="INFO">${ELEMENT_EXISTS} = True</msg>
+<var>${ELEMENT_EXISTS}</var>
+<arg>Element Should Be Visible</arg>
+<arg>//a[.='Add to cart']</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2025-01-31T16:42:18.312818" elapsed="0.056055"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-01-31T16:42:18.369373" level="INFO">Clicking element '//a[.='Add to cart']'.</msg>
+<arg>//a[.='Add to cart']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-31T16:42:18.369091" elapsed="0.510813"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-01-31T16:42:19.880559" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-01-31T16:42:18.880049" elapsed="1.000732"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-01-31T16:42:19.881488" level="INFO">Clicking button '//button[@class='btn btn-success close-modal btn-block']'.</msg>
+<arg>//button[@class='btn btn-success close-modal btn-block']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-31T16:42:19.881116" elapsed="0.077990"/>
+</kw>
+<status status="PASS" start="2025-01-31T16:42:18.312422" elapsed="1.646814"/>
+</kw>
+<var name="${i}">0</var>
+<status status="PASS" start="2025-01-31T16:42:18.312164" elapsed="1.647124"/>
+</iter>
+<iter>
+<kw name="Adding a product" owner="keywords">
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-01-31T16:42:19.980940" level="INFO">Element '//a[.='Add to cart']' is displayed.</msg>
+<arg>//a[.='Add to cart']</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-01-31T16:42:19.960620" elapsed="0.020496"/>
+</kw>
+<msg time="2025-01-31T16:42:19.981328" level="INFO">${ELEMENT_EXISTS} = True</msg>
+<var>${ELEMENT_EXISTS}</var>
+<arg>Element Should Be Visible</arg>
+<arg>//a[.='Add to cart']</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2025-01-31T16:42:19.960324" elapsed="0.021050"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-01-31T16:42:19.981893" level="INFO">Clicking element '//a[.='Add to cart']'.</msg>
+<arg>//a[.='Add to cart']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-31T16:42:19.981606" elapsed="0.056441"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-01-31T16:42:21.038722" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-01-31T16:42:20.038326" elapsed="1.000561"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-01-31T16:42:21.039365" level="INFO">Clicking button '//button[@class='btn btn-success close-modal btn-block']'.</msg>
+<arg>//button[@class='btn btn-success close-modal btn-block']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-31T16:42:21.039112" elapsed="0.067288"/>
+</kw>
+<status status="PASS" start="2025-01-31T16:42:19.959711" elapsed="1.146825"/>
+</kw>
+<var name="${i}">1</var>
+<status status="PASS" start="2025-01-31T16:42:19.959464" elapsed="1.147123"/>
+</iter>
+<var>${i}</var>
+<value>${NB_PRODUCTS}</value>
+<status status="PASS" start="2025-01-31T16:42:18.311934" elapsed="2.794722"/>
+</for>
+<arg>${NB_PRODUCTS}</arg>
+<status status="PASS" start="2025-01-31T16:42:17.269236" elapsed="3.837531"/>
+</kw>
+<kw name="When User click on the delete user button" owner="keywords">
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-01-31T16:42:21.127570" level="INFO">Element '//a[contains(.,'Delete Account')]' is displayed.</msg>
+<arg>//a[contains(.,'Delete Account')]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-01-31T16:42:21.107681" elapsed="0.020076"/>
+</kw>
+<msg time="2025-01-31T16:42:21.127969" level="INFO">${ELEMENT_EXISTS} = True</msg>
+<var>${ELEMENT_EXISTS}</var>
+<arg>Element Should Be Visible</arg>
+<arg>//a[contains(.,'Delete Account')]</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2025-01-31T16:42:21.107479" elapsed="0.020539"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-01-31T16:42:21.128505" level="INFO">Clicking element '//a[contains(.,'Delete Account')]'.</msg>
+<arg>//a[contains(.,'Delete Account')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-31T16:42:21.128267" elapsed="1.052245"/>
+</kw>
+<status status="PASS" start="2025-01-31T16:42:21.107127" elapsed="1.073478"/>
+</kw>
+<kw name="Then The account deletion is confirmed" owner="keywords">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-01-31T16:42:23.181926" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-01-31T16:42:22.181331" elapsed="1.001292"/>
+</kw>
+<kw name="The following string is visible" owner="keywords">
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-01-31T16:42:23.201000" level="INFO">${TEXTE_Recup} = ACCOUNT DELETED!</msg>
+<var>${TEXTE_Recup}</var>
+<arg>//h2[@class='title text-center']</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-31T16:42:23.183354" elapsed="0.017709"/>
+</kw>
+<kw name="Should Match Regexp" owner="BuiltIn">
+<arg>${TEXTE_Recup}</arg>
+<arg>(?i)${RUBRIQUE}</arg>
+<doc>Fails if ``string`` does not match ``pattern`` as a regular expression.</doc>
+<status status="PASS" start="2025-01-31T16:42:23.201281" elapsed="0.000335"/>
+</kw>
+<arg>${ACCOUNT_DELETED}</arg>
+<status status="PASS" start="2025-01-31T16:42:23.182882" elapsed="0.018850"/>
+</kw>
+<kw name="Get Location" owner="SeleniumLibrary">
+<msg time="2025-01-31T16:42:23.206911" level="INFO">${URL_Locale} = https://automationexercise.com/delete_account</msg>
+<var>${URL_Locale}</var>
+<doc>Returns the current browser window URL.</doc>
+<status status="PASS" start="2025-01-31T16:42:23.201882" elapsed="0.005081"/>
+</kw>
+<kw name="Comparer URL" owner="keywords">
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${URL1}</arg>
+<arg>${URL2}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2025-01-31T16:42:23.207536" elapsed="0.000234"/>
+</kw>
+<arg>${URL_locale}</arg>
+<arg>${URL2}/delete_account</arg>
+<status status="PASS" start="2025-01-31T16:42:23.207166" elapsed="0.000694"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-01-31T16:42:23.208158" level="INFO">Clicking element '//a[@href="/"]'.</msg>
+<arg>//a[@href="/"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-31T16:42:23.208009" elapsed="1.353292"/>
+</kw>
+<status status="PASS" start="2025-01-31T16:42:22.180984" elapsed="2.380537"/>
+</kw>
+<status status="PASS" start="2025-01-31T16:41:51.764589" elapsed="32.797557"/>
+</test>
+<doc>Rechercher un produit spécifique et vérifier les résultats</doc>
+<status status="FAIL" start="2025-01-31T16:41:41.786523" elapsed="42.777151"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Tp Validation Abo Automationexo" id="s1" pass="1" fail="1" skip="0">Tp Validation Abo Automationexo</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

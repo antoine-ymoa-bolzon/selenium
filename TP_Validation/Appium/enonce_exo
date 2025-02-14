@@ -1,0 +1,69 @@
+Ouvrez l’application ApiDemo
+ 
+View animation push > Sélectionne hyperspace et retranscrit les messages affichés 
+ 
+Ensuite chronometer commencez le et changer le format, assurez vous que le format a changer mais que le chronomètre tourne encore
+ 
+Seek bar mettez la à 88
+ 
+Ensuite secure view 
+ 
+cliquez sur pop toast et cliquez sur don’t click! et fait en sorte de t’assurer que tu reviens au 1er message d’erreur 
+ 
+Splitting touches across views 
+et fait en sorte que Leicester et Wigmore sont alignés
+ 
+Animation / Loading
+ 
+Assure toi que la 4ème balle change de couleur
+
+
+
+
+Given The user launch ApiDemo App
+When The user go to views
+And The user go to animations
+And The user go to push
+Then The user can see some messages
+
+Given The user launch ApiDemo App
+When The user go to views
+And The user go to chronometer
+And The user start the chronometer
+And The user change the format
+Then The chronometer still running
+
+Given The user launch ApiDemo App
+When The user go to views
+And The user go to Seek Bar
+And The user slide the cursor
+Then The value 88 is visible
+
+Given The user launch ApiDemo App
+When The user go to views
+And The user go to Seek Bar
+And The user slide the cursor
+Then The value 88 is visible
+
+Given The user launch ApiDemo App
+When The user go to views
+And go to Secure View
+And click to pop toast
+And click on "Don't click!"
+And refait the precedents actions
+Then The user should see the first error message
+
+Given The user launch ApiDemo App
+When The user go to views
+And go to Splitting touches
+And slide the left column to see Leicester
+And slide the right column to see Wigmore
+Then the 2 cities are visibly on the same line
+
+Given The user launch ApiDemo App
+When The user go to animations
+And go to loading
+And run the function
+Then the 4th ball have is color changed
+
+

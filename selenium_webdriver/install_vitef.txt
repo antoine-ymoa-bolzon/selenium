@@ -1,0 +1,13 @@
+
+
+Webdriver
+
+
+
+pip install selenium
+pip install pytest-html
+pip install webdriver-manager
+pip install pytest-bdd
+
+
+pour lancer un test ensuite: pytest ./test_redige.py

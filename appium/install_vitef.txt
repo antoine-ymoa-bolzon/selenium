@@ -288,3 +288,13 @@ Copier
 Modifier
 netstat -ano | findstr 4723
 Si tout semble bon, relance ton test Robot Framework.
+
+
+
+
+
+En cas de volonté de désinstallation d'apk. se rendre dans /platform-tools
+> cmd
+> lancer un device (emulator ou android studio)
+> adb shell pm list packages | findstr nomDuPackage
+> adb uninstall packageTrouvé
